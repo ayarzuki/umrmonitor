@@ -83,4 +83,6 @@ curl -s "https://umrmonitor.workers.dev/api/top?n=3&arah=tertinggi" | jq '.provi
 
 ## Lisensi
 
-Kode: MIT (`LICENSE`). Dataset: fakta publik dari SK gubernur, dihimpun ulang dengan atribusi sumber per baris — lihat catatan di akhir `LICENSE`.
+Kode: **MIT** (`LICENSE`).
+
+Dataset: fakta publik dari SK gubernur, dihimpun ulang dengan atribusi sumber per baris — catatan lengkap di `DATA.md`.

@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Catatan terpisah mengenai DATA (bukan kode):
-
-Kode di repositori ini berlisensi MIT. Dataset `public/data/ump-2026.json`
-berisi fakta upah minimum yang ditetapkan oleh pemerintah daerah Indonesia
-(Surat Keputusan Gubernur) dan dihimpun ulang dari sumber publik yang
-dicantumkan per baris pada field `sumber_url`. Dataset disediakan apa adanya
-untuk keperluan referensi; angka resmi tetap mengacu pada SK gubernur dan
-publikasi Kementerian Ketenagakerjaan. Ini bukan nasihat hukum atau
-ketenagakerjaan.
