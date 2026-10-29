@@ -111,6 +111,24 @@ async function run() {
       );
     }
 
+    // 3b. /api/ump?tahun=2025 = 38 baris pembanding; tahun tak dikenal = 404
+    {
+      const res25 = await fetch(`${baseUrl}/api/ump?tahun=2025`);
+      const b25 = await res25.json();
+      const ok25 =
+        res25.status === 200 &&
+        b25.jumlah === 38 &&
+        b25.provinsi.some((p) => p.provinsi === "Jawa Barat" && p.ump === 2191232);
+      const res30 = await fetch(`${baseUrl}/api/ump?tahun=2030`);
+      const b30 = await res30.json();
+      const ok30 = res30.status === 404 && Array.isArray(b30.tahun_tersedia);
+      check(
+        "GET /api/ump?tahun=2025 = 38 baris pembanding, tahun 2030 = 404",
+        ok25 && ok30,
+        `2025 jumlah=${b25.jumlah} status30=${res30.status}`
+      );
+    }
+
     // 4. /api/ump/tidak-ada = 404
     {
       const res = await fetch(`${baseUrl}/api/ump/tidak-ada`);

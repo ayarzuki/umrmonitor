@@ -528,19 +528,41 @@ export default {
       });
     }
 
-    // GET /api/ump
+    // GET /api/ump — tahun 2026 (dataset utama) dan 2025 (kolom ump_sebelumnya).
+    // Tahun lain ditolak 404 dengan daftar tahun yang tersedia, bukan array kosong yang ambigu.
     if (method === "GET" && pathname === "/api/ump") {
       const tahunParam = searchParams.get("tahun");
       const tahun = tahunParam ? Number(tahunParam) : dataset.tahun;
-      const list =
-        tahun === dataset.tahun
-          ? dataset.provinsi
-          : dataset.provinsi.filter((p) => p.tahun === tahun);
-      return jsonResponse({
-        tahun,
-        jumlah: list.length,
-        provinsi: list,
-      });
+      if (tahun === dataset.tahun) {
+        return jsonResponse({
+          tahun,
+          jumlah: dataset.provinsi.length,
+          provinsi: dataset.provinsi,
+        });
+      }
+      if (tahun === 2025) {
+        // UMP 2025 diambil dari kolom ump_sebelumnya; kenaikan % 2025 tidak dihitung
+        // karena dataset ini tidak memuat UMP 2024.
+        const list = dataset.provinsi.map((p) => ({
+          provinsi: p.provinsi,
+          slug: p.slug,
+          tahun: 2025,
+          ump: p.ump_sebelumnya,
+          sumber_url: p.sumber_url,
+          dicek_pada: p.dicek_pada,
+          catatan: "Nilai UMP 2025 dipakai sebagai pembanding di dataset ini.",
+        }));
+        return jsonResponse({ tahun, jumlah: list.length, provinsi: list });
+      }
+      return jsonResponse(
+        {
+          ok: false,
+          error: `tahun ${tahunParam} tidak tersedia`,
+          tahun_tersedia: [2025, dataset.tahun],
+        },
+        404,
+        "no-store"
+      );
     }
 
     // GET /api/ump/:slug

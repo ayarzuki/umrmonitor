@@ -35,7 +35,7 @@ npx wrangler deploy
 - `GET /` — Halaman HTML utama (server-rendered) berisi tabel perbandingan UMP 2026 & 2025 untuk 38 provinsi, tautan sumber, dan form notifikasi UMP 2027.
 - `GET /provinsi/:slug` — Halaman detail UMP per provinsi (mis. `/provinsi/aceh`, `/provinsi/jawa-barat`).
 - `GET /api/meta` — Metadata dataset (`{dataset, tahun, dibuat, jumlah_provinsi, dasar_hukum, catatan, sumber_rekapitulasi}`).
-- `GET /api/ump?tahun=2026` — Seluruh data provinsi (`{tahun, jumlah, provinsi: [...]}`).
+- `GET /api/ump?tahun=2026` — Seluruh data provinsi (`{tahun, jumlah, provinsi: [...]}`). `?tahun=2025` mengembalikan kolom pembanding (`ump_sebelumnya`); tahun lain → 404 dengan `tahun_tersedia`.
 - `GET /api/ump/:slug` — Detail JSON satu provinsi berdasarkan slug (404 jika tidak ditemukan).
 - `GET /api/top?n=5&arah=tertinggi|terendah` — Daftar `n` provinsi dengan nominal UMP tertinggi atau terendah.
 - `POST /api/subscribe` — Mendaftarkan email notifikasi UMP 2027 ke KV `umrmonitor_subs` dengan body JSON `{"email": "nama@domain.com"}`.
