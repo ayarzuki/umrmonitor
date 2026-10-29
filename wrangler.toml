@@ -1,0 +1,11 @@
+name = "umrmonitor"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[kv_namespaces]]
+binding = "umrmonitor_subs"
+id = "d0c9d46f4dc9481dac49621405370ccd"
