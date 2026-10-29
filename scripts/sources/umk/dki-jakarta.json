@@ -1,0 +1,25 @@
+{
+ "provinsi": "DKI Jakarta",
+ "slug": "dki-jakarta",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "status": "tanpa-umk",
+ "catatan": "DKI Jakarta tidak menetapkan UMK. Yang berlaku UMP Rp5.729.876 (Kepgub No. 1142 Tahun 2025) ditambah 61 upah minimum sektoral (Kepgub No. 33 Tahun 2026); angka sektoral tidak dimasukkan sebagai UMK.",
+ "sumber": [
+  {
+   "url": "https://kariraman.com/upah-minimum/jakarta/",
+   "tipe": "berita",
+   "judul": "konfirmasi status UMK",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://calcuid.com/upah-minimum/dki-jakarta/",
+   "tipe": "berita",
+   "judul": "konfirmasi status UMK",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": []
+}

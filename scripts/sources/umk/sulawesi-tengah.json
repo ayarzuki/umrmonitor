@@ -1,0 +1,129 @@
+{
+ "provinsi": "Sulawesi Tengah",
+ "slug": "sulawesi-tengah",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/489/DIS.NAKERTRANS-G.ST/2025",
+ "tanggal_sk": "2025-12-22",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://jdih.sultengprov.go.id/produk-hukum/detailperaturan/1177",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/sulawesi-tengah/#kabupaten-poso",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://jdih.sultengprov.go.id/produk-hukum/detailperaturan/1178",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/sulawesi-tengah/#kabupaten-buol",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://jdih.sultengprov.go.id/produk-hukum/detailperaturan/1176",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/sulawesi-tengah/#kabupaten-morowali-utara",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-sulawesi-tengah-2026-fZf3E",
+   "tipe": "berita",
+   "judul": "sumber tambahan",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Morowali Utara",
+   "jenis": "Kabupaten",
+   "umk": 4408209,
+   "kode_bps": "7212",
+   "nomor_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/488/DIS.NAKERTRANS-G.ST/2025"
+  },
+  {
+   "nama": "Kabupaten Morowali",
+   "jenis": "Kabupaten",
+   "umk": 4223000.0
+  },
+  {
+   "nama": "Kota Palu",
+   "jenis": "Kota",
+   "umk": 3619466.72,
+   "kode_bps": "7271",
+   "nomor_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/486/DIS.NAKERTRANS-G.ST/2025"
+  },
+  {
+   "nama": "Kabupaten Poso",
+   "jenis": "Kabupaten",
+   "umk": 3268227,
+   "kode_bps": "7204",
+   "nomor_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/489/DIS.NAKERTRANS-G.ST/2025"
+  },
+  {
+   "nama": "Kabupaten Buol",
+   "jenis": "Kabupaten",
+   "umk": 3198109.05,
+   "kode_bps": "7207",
+   "nomor_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/491/DIS.NAKERTRANS-G.ST/2025"
+  },
+  {
+   "nama": "Kabupaten Banggai",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Banggai Kepulauan",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Banggai Laut",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Donggala",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Parigi Moutong",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Sigi",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  },
+  {
+   "nama": "Kabupaten Toli-toli",
+   "jenis": "Kabupaten",
+   "umk": 3179565.0
+  }
+ ]
+}

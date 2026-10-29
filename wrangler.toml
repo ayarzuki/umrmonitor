@@ -2,6 +2,11 @@ name = "umrmonitor"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
 
+# URL kanonik sekarang Pages: https://umrmonitor.pages.dev
+# Route workers.dev dimatikan supaya tidak ada dua salinan isi yang sama (duplikat SEO).
+# Worker ini tetap ada sebagai jalur cadangan; aktifkan lagi dengan workers_dev = true.
+workers_dev = false
+
 [assets]
 directory = "./public"
 binding = "ASSETS"

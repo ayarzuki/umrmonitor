@@ -1,0 +1,89 @@
+{
+ "provinsi": "Sulawesi Utara",
+ "slug": "sulawesi-utara",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 407 Tahun 2025",
+ "tanggal_sk": "2026-02-03",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-utara-2026-kota-manado-paling-tinggi-qIW5v",
+   "tipe": "berita",
+   "judul": "14 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Manado",
+   "jenis": "Kota",
+   "umk": 4022017.0
+  },
+  {
+   "nama": "Kota Bitung",
+   "jenis": "Kota",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kota Kotamobagu",
+   "jenis": "Kota",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kota Tomohon",
+   "jenis": "Kota",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Bolaang Mongondow",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Bolaang Mongondow Selatan",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Bolaang Mongondow Timur",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Bolaang Mongondow Utara",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Sangihe",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Talaud",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Minahasa",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Minahasa Selatan",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Minahasa Tenggara",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  },
+  {
+   "nama": "Kabupaten Minahasa Utara",
+   "jenis": "Kabupaten",
+   "umk": 4002630.0
+  }
+ ]
+}

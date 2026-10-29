@@ -1,0 +1,19 @@
+{
+ "provinsi": "Kep. Bangka Belitung",
+ "slug": "kepulauan-bangka-belitung",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "status": "tanpa-umk",
+ "catatan": "Tidak menetapkan UMK 2026: seluruh kabupaten/kota memakai UMP Rp4.035.000; GoodStats menyatakan seluruh wilayah menggunakan besaran UMP sebagai UMK.",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-bangka-belitung-2026-NIqBD",
+   "tipe": "berita",
+   "judul": "konfirmasi status UMK",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": []
+}

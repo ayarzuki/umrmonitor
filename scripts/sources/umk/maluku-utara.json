@@ -1,0 +1,69 @@
+{
+ "provinsi": "Maluku Utara",
+ "slug": "maluku-utara",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 524/KPTS/MU/2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-maluku-utara-2026-kota-ternate-naik-4-mpt1o",
+   "tipe": "berita",
+   "judul": "10 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Ternate",
+   "jenis": "Kota",
+   "umk": 3599562.0
+  },
+  {
+   "nama": "Kota Tidore Kepulauan",
+   "jenis": "Kota",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Halmahera Barat",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Halmahera Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Halmahera Timur",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Halmahera Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Halmahera Utara",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Sula",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Pulau Morotai",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  },
+  {
+   "nama": "Kabupaten Pulau Taliabu",
+   "jenis": "Kabupaten",
+   "umk": 3510240.0
+  }
+ ]
+}

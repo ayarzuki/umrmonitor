@@ -1,0 +1,104 @@
+{
+ "provinsi": "Sumatera Selatan",
+ "slug": "sumatera-selatan",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 982/KPTS/DISNAKERTRANS/2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-sumatra-selatan-2026-HxIvG",
+   "tipe": "berita",
+   "judul": "17 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Palembang",
+   "jenis": "Kota",
+   "umk": 4192837.0
+  },
+  {
+   "nama": "Kabupaten Muara Enim",
+   "jenis": "Kabupaten",
+   "umk": 4178363.0
+  },
+  {
+   "nama": "Kabupaten Musi Rawas",
+   "jenis": "Kabupaten",
+   "umk": 4058812.0
+  },
+  {
+   "nama": "Kabupaten Musi Rawas Utara",
+   "jenis": "Kabupaten",
+   "umk": 4047385.0
+  },
+  {
+   "nama": "Kabupaten Lahat",
+   "jenis": "Kabupaten",
+   "umk": 4041420.0
+  },
+  {
+   "nama": "Kabupaten Musi Banyuasin",
+   "jenis": "Kabupaten",
+   "umk": 4039054.0
+  },
+  {
+   "nama": "Kabupaten Ogan Komering Ulu Timur",
+   "jenis": "Kabupaten",
+   "umk": 3993676.0
+  },
+  {
+   "nama": "Kabupaten Banyu Asin",
+   "jenis": "Kabupaten",
+   "umk": 3976492.0
+  },
+  {
+   "nama": "Kota Lubuklinggau",
+   "jenis": "Kota",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kota Pagar Alam",
+   "jenis": "Kota",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kota Prabumulih",
+   "jenis": "Kota",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Empat Lawang",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Ogan Ilir",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Ogan Komering Ilir",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Ogan Komering Ulu",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Ogan Komering Ulu Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  },
+  {
+   "nama": "Kabupaten Penukal Abab Lematang Ilir",
+   "jenis": "Kabupaten",
+   "umk": 3942963.0
+  }
+ ]
+}

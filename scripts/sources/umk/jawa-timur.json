@@ -1,0 +1,321 @@
+{
+ "provinsi": "Jawa Timur",
+ "slug": "jawa-timur",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://files.jdih.jatimprov.go.id/jdih-prod/uploads/topics/2025kg00350937.pdf",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-timur/#kabupaten-pacitan",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-timur/#kabupaten-ponorogo",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-timur/#kabupaten-trenggalek",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-timur/#kabupaten-tulungagung",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-timur/#kabupaten-blitar",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Surabaya",
+   "jenis": "Kota",
+   "umk": 5288796,
+   "kode_bps": "3578",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Gresik",
+   "jenis": "Kabupaten",
+   "umk": 5195401,
+   "kode_bps": "3525",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Sidoarjo",
+   "jenis": "Kabupaten",
+   "umk": 5191541,
+   "kode_bps": "3515",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Pasuruan",
+   "jenis": "Kabupaten",
+   "umk": 5187681,
+   "kode_bps": "3514",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Mojokerto",
+   "jenis": "Kabupaten",
+   "umk": 5176101,
+   "kode_bps": "3516",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Malang",
+   "jenis": "Kabupaten",
+   "umk": 3802862,
+   "kode_bps": "3507",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Malang",
+   "jenis": "Kota",
+   "umk": 3736101,
+   "kode_bps": "3573",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Batu",
+   "jenis": "Kota",
+   "umk": 3562484,
+   "kode_bps": "3579",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Pasuruan",
+   "jenis": "Kota",
+   "umk": 3555301,
+   "kode_bps": "3575",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Jombang",
+   "jenis": "Kabupaten",
+   "umk": 3320770,
+   "kode_bps": "3517",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Tuban",
+   "jenis": "Kabupaten",
+   "umk": 3229092,
+   "kode_bps": "3523",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Mojokerto",
+   "jenis": "Kota",
+   "umk": 3208556,
+   "kode_bps": "3576",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Lamongan",
+   "jenis": "Kabupaten",
+   "umk": 3196328,
+   "kode_bps": "3524",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Probolinggo",
+   "jenis": "Kabupaten",
+   "umk": 3164526,
+   "kode_bps": "3513",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Probolinggo",
+   "jenis": "Kota",
+   "umk": 3045172,
+   "kode_bps": "3574",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Jember",
+   "jenis": "Kabupaten",
+   "umk": 3012197,
+   "kode_bps": "3509",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Banyuwangi",
+   "jenis": "Kabupaten",
+   "umk": 2989145,
+   "kode_bps": "3510",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Kediri",
+   "jenis": "Kota",
+   "umk": 2742806,
+   "kode_bps": "3571",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Bojonegoro",
+   "jenis": "Kabupaten",
+   "umk": 2685983,
+   "kode_bps": "3522",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Kediri",
+   "jenis": "Kabupaten",
+   "umk": 2651603,
+   "kode_bps": "3506",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Blitar",
+   "jenis": "Kota",
+   "umk": 2639518,
+   "kode_bps": "3572",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Tulungagung",
+   "jenis": "Kabupaten",
+   "umk": 2628190,
+   "kode_bps": "3504",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kota Madiun",
+   "jenis": "Kota",
+   "umk": 2588794,
+   "kode_bps": "3577",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Lumajang",
+   "jenis": "Kabupaten",
+   "umk": 2578320,
+   "kode_bps": "3508",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Blitar",
+   "jenis": "Kabupaten",
+   "umk": 2567744,
+   "kode_bps": "3505",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Nganjuk",
+   "jenis": "Kabupaten",
+   "umk": 2564627,
+   "kode_bps": "3518",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Ngawi",
+   "jenis": "Kabupaten",
+   "umk": 2556815,
+   "kode_bps": "3521",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Magetan",
+   "jenis": "Kabupaten",
+   "umk": 2553866,
+   "kode_bps": "3520",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Sumenep",
+   "jenis": "Kabupaten",
+   "umk": 2553688,
+   "kode_bps": "3529",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Madiun",
+   "jenis": "Kabupaten",
+   "umk": 2553221,
+   "kode_bps": "3519",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Bangkalan",
+   "jenis": "Kabupaten",
+   "umk": 2550274,
+   "kode_bps": "3526",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Ponorogo",
+   "jenis": "Kabupaten",
+   "umk": 2549876,
+   "kode_bps": "3502",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Trenggalek",
+   "jenis": "Kabupaten",
+   "umk": 2530313,
+   "kode_bps": "3503",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Pamekasan",
+   "jenis": "Kabupaten",
+   "umk": 2528004,
+   "kode_bps": "3528",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Pacitan",
+   "jenis": "Kabupaten",
+   "umk": 2514892,
+   "kode_bps": "3501",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Bondowoso",
+   "jenis": "Kabupaten",
+   "umk": 2496886,
+   "kode_bps": "3511",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Sampang",
+   "jenis": "Kabupaten",
+   "umk": 2484443,
+   "kode_bps": "3527",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  },
+  {
+   "nama": "Kabupaten Situbondo",
+   "jenis": "Kabupaten",
+   "umk": 2483962,
+   "kode_bps": "3512",
+   "nomor_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025"
+  }
+ ]
+}

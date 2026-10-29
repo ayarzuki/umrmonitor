@@ -1,0 +1,90 @@
+{
+ "provinsi": "Bengkulu",
+ "slug": "bengkulu",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025",
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://jdih.bengkuluprov.go.id/produk-hukum/keputusan-gubernur-bengkulu-nomor-k647dkktrans-tahun-2025-tentang-upah-minimum-kabupatenkota-provinsi-bengkulu-tahun-202-f0ef60",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bengkulu/#kabupaten-rejang-lebong",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bengkulu/#kabupaten-bengkulu-utara",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bengkulu/#kabupaten-mukomuko",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bengkulu/#kabupaten-bengkulu-tengah",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bengkulu/#kota-bengkulu",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Mukomuko",
+   "jenis": "Kabupaten",
+   "umk": 3217086,
+   "kode_bps": "1706",
+   "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025"
+  },
+  {
+   "nama": "Kota Bengkulu",
+   "jenis": "Kota",
+   "umk": 3089218.66,
+   "kode_bps": "1771",
+   "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Bengkulu Tengah",
+   "jenis": "Kabupaten",
+   "umk": 2945142.2,
+   "kode_bps": "1709",
+   "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Bengkulu Utara",
+   "jenis": "Kabupaten",
+   "umk": 2906158.92,
+   "kode_bps": "1703",
+   "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Rejang Lebong",
+   "jenis": "Kabupaten",
+   "umk": 2841749.59,
+   "kode_bps": "1702",
+   "nomor_sk": "Keputusan Gubernur Bengkulu Nomor K.647.DKKTRANS Tahun 2025"
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "provinsi": "Kalimantan Tengah",
+ "slug": "kalimantan-tengah",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 188.44/477/2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-kalimantan-tengah-2026-5BtCb",
+   "tipe": "berita",
+   "judul": "14 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Barito Utara",
+   "jenis": "Kabupaten",
+   "umk": 4093071.0
+  },
+  {
+   "nama": "Kabupaten Seruyan",
+   "jenis": "Kabupaten",
+   "umk": 4051079.0
+  },
+  {
+   "nama": "Kabupaten Barito Selatan",
+   "jenis": "Kabupaten",
+   "umk": 4045059.0
+  },
+  {
+   "nama": "Kabupaten Murung Raya",
+   "jenis": "Kabupaten",
+   "umk": 3998046.0
+  },
+  {
+   "nama": "Kabupaten Lamandau",
+   "jenis": "Kabupaten",
+   "umk": 3938998.0
+  },
+  {
+   "nama": "Kabupaten Sukamara",
+   "jenis": "Kabupaten",
+   "umk": 3912098.0
+  },
+  {
+   "nama": "Kabupaten Kotawaringin Barat",
+   "jenis": "Kabupaten",
+   "umk": 3909005.0
+  },
+  {
+   "nama": "Kabupaten Gunung Mas",
+   "jenis": "Kabupaten",
+   "umk": 3770716.0
+  },
+  {
+   "nama": "Kabupaten Kotawaringin Timur",
+   "jenis": "Kabupaten",
+   "umk": 3756643.0
+  },
+  {
+   "nama": "Kabupaten Katingan",
+   "jenis": "Kabupaten",
+   "umk": 3729766.0
+  },
+  {
+   "nama": "Kota Palangka Raya",
+   "jenis": "Kota",
+   "umk": 3724677.0
+  },
+  {
+   "nama": "Kabupaten Barito Timur",
+   "jenis": "Kabupaten",
+   "umk": 3716006.0
+  },
+  {
+   "nama": "Kabupaten Kapuas",
+   "jenis": "Kabupaten",
+   "umk": 3710096.0
+  },
+  {
+   "nama": "Kabupaten Pulang Pisau",
+   "jenis": "Kabupaten",
+   "umk": 3701205.0
+  }
+ ]
+}

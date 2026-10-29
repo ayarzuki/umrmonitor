@@ -1,0 +1,19 @@
+{
+ "provinsi": "Papua Pegunungan",
+ "slug": "papua-pegunungan",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "status": "tanpa-umk",
+ "catatan": "Tidak menetapkan UMK 2026: seluruh kabupaten/kota memakai UMP Rp4.508.714: sumber menyatakan semua daerah menggunakan UMP.",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-papua-pegunungan-2026-naik-5-u1brP",
+   "tipe": "berita",
+   "judul": "konfirmasi status UMK",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": []
+}

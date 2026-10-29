@@ -1,0 +1,44 @@
+{
+ "provinsi": "Sulawesi Barat",
+ "slug": "sulawesi-barat",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 858 Tahun 2025",
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-barat-2026-kab-pasangkayu-paling-tinggi-dmlCM",
+   "tipe": "berita",
+   "judul": "5 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Mamuju",
+   "jenis": "Kabupaten",
+   "umk": 3363847.0
+  },
+  {
+   "nama": "Kabupaten Polewali Mandar",
+   "jenis": "Kabupaten",
+   "umk": 3327886.0
+  },
+  {
+   "nama": "Kabupaten Majene",
+   "jenis": "Kabupaten",
+   "umk": 3315934.0
+  },
+  {
+   "nama": "Kabupaten Mamasa",
+   "jenis": "Kabupaten",
+   "umk": 3315934.0
+  },
+  {
+   "nama": "Kabupaten Mamuju Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3315934.0
+  }
+ ]
+}

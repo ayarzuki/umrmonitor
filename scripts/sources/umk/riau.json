@@ -1,0 +1,79 @@
+{
+ "provinsi": "Riau",
+ "slug": "riau",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": "2025-12-23",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-riau-2026-kota-dumai-jadi-yang-tertinggi-bDVe3",
+   "tipe": "berita",
+   "judul": "12 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Dumai",
+   "jenis": "Kota",
+   "umk": 4431175.0
+  },
+  {
+   "nama": "Kabupaten Bengkalis",
+   "jenis": "Kabupaten",
+   "umk": 4155318.0
+  },
+  {
+   "nama": "Kabupaten Siak",
+   "jenis": "Kabupaten",
+   "umk": 4001327.0
+  },
+  {
+   "nama": "Kota Pekanbaru",
+   "jenis": "Kota",
+   "umk": 3998179.0
+  },
+  {
+   "nama": "Kabupaten Indragiri Hulu",
+   "jenis": "Kabupaten",
+   "umk": 3988406.0
+  },
+  {
+   "nama": "Kabupaten Kuantan Singingi",
+   "jenis": "Kabupaten",
+   "umk": 3949467.0
+  },
+  {
+   "nama": "Kabupaten Kampar",
+   "jenis": "Kabupaten",
+   "umk": 3898211.0
+  },
+  {
+   "nama": "Kabupaten Pelalawan",
+   "jenis": "Kabupaten",
+   "umk": 3894260.0
+  },
+  {
+   "nama": "Kabupaten Rokan Hulu",
+   "jenis": "Kabupaten",
+   "umk": 3819353.0
+  },
+  {
+   "nama": "Kabupaten Rokan Hilir",
+   "jenis": "Kabupaten",
+   "umk": 3783053.0
+  },
+  {
+   "nama": "Kabupaten Indragiri Hilir",
+   "jenis": "Kabupaten",
+   "umk": 3780496.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Meranti",
+   "jenis": "Kabupaten",
+   "umk": 3780496.0
+  }
+ ]
+}

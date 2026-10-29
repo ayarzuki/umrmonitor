@@ -1,0 +1,94 @@
+{
+ "provinsi": "Lampung",
+ "slug": "lampung",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": "2026-01-03",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-lampung-2026-Tce34",
+   "tipe": "berita",
+   "judul": "15 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Bandar Lampung",
+   "jenis": "Kota",
+   "umk": 3491889.0
+  },
+  {
+   "nama": "Kabupaten Mesuji",
+   "jenis": "Kabupaten",
+   "umk": 3227333.0
+  },
+  {
+   "nama": "Kabupaten Lampung Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3219609.0
+  },
+  {
+   "nama": "Kabupaten Way Kanan",
+   "jenis": "Kabupaten",
+   "umk": 3215764.0
+  },
+  {
+   "nama": "Kota Metro",
+   "jenis": "Kota",
+   "umk": 3050498.0
+  },
+  {
+   "nama": "Kabupaten Lampung Barat",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Lampung Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Lampung Timur",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Lampung Utara",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Pesawaran",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Pesisir Barat",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Pringsewu",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Tanggamus",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Tulang Bawang",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  },
+  {
+   "nama": "Kabupaten Tulang Bawang Barat",
+   "jenis": "Kabupaten",
+   "umk": 3047734.0
+  }
+ ]
+}

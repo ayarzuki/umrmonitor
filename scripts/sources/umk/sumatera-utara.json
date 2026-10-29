@@ -1,0 +1,175 @@
+{
+ "provinsi": "Sumatera Utara",
+ "slug": "sumatera-utara",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 188.44/908/KPTS/2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-sumatra-utara-2026-kota-medan-naik-8-RCShe",
+   "tipe": "berita",
+   "judul": "21 baris cocok",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://gajihub.com/blog/ump-sumatera-utara",
+   "tipe": "berita",
+   "judul": "sumber tambahan",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Medan",
+   "jenis": "Kota",
+   "umk": 4335198.0
+  },
+  {
+   "nama": "Kabupaten Deli Serdang",
+   "jenis": "Kabupaten",
+   "umk": 4041543.0
+  },
+  {
+   "nama": "Kabupaten Batu Bara",
+   "jenis": "Kabupaten",
+   "umk": 3970000.0
+  },
+  {
+   "nama": "Kabupaten Karo",
+   "jenis": "Kabupaten",
+   "umk": 3843153.0
+  },
+  {
+   "nama": "Kabupaten Labuhan Batu",
+   "jenis": "Kabupaten",
+   "umk": 3748181.0
+  },
+  {
+   "nama": "Kabupaten Labuhan Batu Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3690000.0
+  },
+  {
+   "nama": "Kota Sibolga",
+   "jenis": "Kota",
+   "umk": 3668667.0
+  },
+  {
+   "nama": "Kabupaten Serdang Bedagai",
+   "jenis": "Kabupaten",
+   "umk": 3605983.0
+  },
+  {
+   "nama": "Kabupaten Labuhan Batu Utara",
+   "jenis": "Kabupaten",
+   "umk": 3603415.0
+  },
+  {
+   "nama": "Kabupaten Tapanuli Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3567941.0
+  },
+  {
+   "nama": "Kabupaten Mandailing Natal",
+   "jenis": "Kabupaten",
+   "umk": 3555900.0
+  },
+  {
+   "nama": "Kabupaten Asahan",
+   "jenis": "Kabupaten",
+   "umk": 3531361.0
+  },
+  {
+   "nama": "Kabupaten Tapanuli Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3509004.0
+  },
+  {
+   "nama": "Kota Tanjung Balai",
+   "jenis": "Kota",
+   "umk": 3496856.0
+  },
+  {
+   "nama": "Kabupaten Padang Lawas",
+   "jenis": "Kabupaten",
+   "umk": 3478237.0
+  },
+  {
+   "nama": "Kota Padangsidimpuan",
+   "jenis": "Kota",
+   "umk": 3416803.0
+  },
+  {
+   "nama": "Kabupaten Langkat",
+   "jenis": "Kabupaten",
+   "umk": 3402892.0
+  },
+  {
+   "nama": "Kota Binjai",
+   "jenis": "Kota",
+   "umk": 3367913.0
+  },
+  {
+   "nama": "Kabupaten Simalungun",
+   "jenis": "Kabupaten",
+   "umk": 3351403.0
+  },
+  {
+   "nama": "Kabupaten Tapanuli Utara",
+   "jenis": "Kabupaten",
+   "umk": 3307618.0
+  },
+  {
+   "nama": "Kota Tebing Tinggi",
+   "jenis": "Kota",
+   "umk": 3229958.0
+  },
+  {
+   "nama": "Kota Gunungsitoli",
+   "jenis": "Kota",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kota Pematang Siantar",
+   "jenis": "Kota",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Dairi",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Nias",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Nias Barat",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Nias Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Nias Utara",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Padang Lawas Utara",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  },
+  {
+   "nama": "Kabupaten Samosir",
+   "jenis": "Kabupaten",
+   "umk": 3228971.0
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "provinsi": "Nusa Tenggara Timur",
+ "slug": "nusa-tenggara-timur",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 535/KEP/HK/2025",
+ "tanggal_sk": "2026-01-29",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-ntt-2026-kota-kupang-naik-5-SOOBh",
+   "tipe": "berita",
+   "judul": "21 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Kupang",
+   "jenis": "Kota",
+   "umk": 2532853.0
+  },
+  {
+   "nama": "Kabupaten Alor",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Belu",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Ende",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Flores Timur",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Kupang",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Lembata",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Malaka",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Manggarai",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Manggarai Barat",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Manggarai Timur",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Nagekeo",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Ngada",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Rote Ndao",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Sikka",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Sumba Barat",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Sumba Barat Daya",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Sumba Tengah",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Sumba Timur",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Timor Tengah Selatan",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  },
+  {
+   "nama": "Kabupaten Timor Tengah Utara",
+   "jenis": "Kabupaten",
+   "umk": 2455898.0
+  }
+ ]
+}

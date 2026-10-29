@@ -1,0 +1,134 @@
+{
+ "provinsi": "Aceh",
+ "slug": "aceh",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 500.15.14.1/1495/2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-aceh-2026-kota-banda-aceh-naik-6-k5blv",
+   "tipe": "berita",
+   "judul": "23 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Banda Aceh",
+   "jenis": "Kota",
+   "umk": 4162965.0
+  },
+  {
+   "nama": "Kabupaten Aceh Tamiang",
+   "jenis": "Kabupaten",
+   "umk": 3978204.0
+  },
+  {
+   "nama": "Kota Langsa",
+   "jenis": "Kota",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kota Lhokseumawe",
+   "jenis": "Kota",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kota Sabang",
+   "jenis": "Kota",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kota Subulussalam",
+   "jenis": "Kota",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Barat",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Barat Daya",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Besar",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Jaya",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Singkil",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Tenggara",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Timur",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Aceh Utara",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Bener Meriah",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Bireuen",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Gayo Lues",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Nagan Raya",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Pidie",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Pidie Jaya",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  },
+  {
+   "nama": "Kabupaten Simeulue",
+   "jenis": "Kabupaten",
+   "umk": 3932552.0
+  }
+ ]
+}

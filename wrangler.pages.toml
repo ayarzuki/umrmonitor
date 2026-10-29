@@ -1,0 +1,13 @@
+# Konfigurasi Cloudflare **Pages** (direct upload) — kanonik: https://umrmonitor.pages.dev
+#
+# `wrangler.toml` tetap dipakai untuk Worker (umrmonitor.aulya-yarzuki.workers.dev).
+# Deploy Pages:
+#   node scripts/build-pages.mjs
+#   npx wrangler pages deploy dist --project-name umrmonitor --branch main --config wrangler.pages.toml
+name = "umrmonitor"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "umrmonitor_subs"
+id = "d0c9d46f4dc9481dac49621405370ccd"

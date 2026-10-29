@@ -1,0 +1,44 @@
+{
+ "provinsi": "Kalimantan Selatan",
+ "slug": "kalimantan-selatan",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 100.3.3.1/01107/KUM/2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-kalimantan-selatan-2026-TrPK0",
+   "tipe": "berita",
+   "judul": "5 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Kota Baru",
+   "jenis": "Kabupaten",
+   "umk": 3904645.0
+  },
+  {
+   "nama": "Kota Banjarmasin",
+   "jenis": "Kota",
+   "umk": 3855894.0
+  },
+  {
+   "nama": "Kota Banjar Baru",
+   "jenis": "Kota",
+   "umk": 3843037.0
+  },
+  {
+   "nama": "Kabupaten Tabalong",
+   "jenis": "Kabupaten",
+   "umk": 3827935.0
+  },
+  {
+   "nama": "Kabupaten Tanah Bumbu",
+   "jenis": "Kabupaten",
+   "umk": 3736000.0
+  }
+ ]
+}

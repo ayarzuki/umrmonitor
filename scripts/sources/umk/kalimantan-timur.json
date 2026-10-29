@@ -1,0 +1,118 @@
+{
+ "provinsi": "Kalimantan Timur",
+ "slug": "kalimantan-timur",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.496/2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://jdih.kaltimprov.go.id/dokumen/keputusan-gubernur-no-100331k4962025-tahun-2025",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://www.kaltimprov.go.id/detailberita/gubernur-kaltim-tetapkan-umk-2026-berau-tertinggi-capai-rp-439-juta",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-timur/#kabupaten-paser",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://jdih.kaltimprov.go.id/dokumen/keputusan-gubernur-no-100331k4912025-tahun-2025",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-timur/#kabupaten-kutai-barat",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://jdih.kaltimprov.go.id/dokumen/keputusan-gubernur-no-100331k4922025-tahun-2025",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Berau",
+   "jenis": "Kabupaten",
+   "umk": 4391337.55,
+   "kode_bps": "6405",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.487/2025"
+  },
+  {
+   "nama": "Kabupaten Kutai Barat",
+   "jenis": "Kabupaten",
+   "umk": 4231617.4,
+   "kode_bps": "6402",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.491/2025"
+  },
+  {
+   "nama": "Kabupaten Penajam Paser Utara",
+   "jenis": "Kabupaten",
+   "umk": 4181134,
+   "kode_bps": "6409",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.498/2025"
+  },
+  {
+   "nama": "Kabupaten Kutai Timur",
+   "jenis": "Kabupaten",
+   "umk": 4067436,
+   "kode_bps": "6404",
+   "nomor_sk": "Pengumuman Gubernur Kalimantan Timur Nomor 500.15.14.1/5096/DTKT.Srk-IV/2025"
+  },
+  {
+   "nama": "Kabupaten Kutai Kartanegara",
+   "jenis": "Kabupaten",
+   "umk": 3991797,
+   "kode_bps": "6403",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.492/2025"
+  },
+  {
+   "nama": "Kota Samarinda",
+   "jenis": "Kota",
+   "umk": 3983882,
+   "kode_bps": "6472",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.500/2025"
+  },
+  {
+   "nama": "Kota Balikpapan",
+   "jenis": "Kota",
+   "umk": 3856694.43,
+   "kode_bps": "6471",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.485/2025"
+  },
+  {
+   "nama": "Kota Bontang",
+   "jenis": "Kota",
+   "umk": 3799480,
+   "kode_bps": "6474",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.489/2025"
+  },
+  {
+   "nama": "Kabupaten Paser",
+   "jenis": "Kabupaten",
+   "umk": 3776998.06,
+   "kode_bps": "6401",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Timur Nomor 100.3.3.1/K.496/2025"
+  }
+ ]
+}

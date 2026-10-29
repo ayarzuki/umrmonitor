@@ -1,0 +1,118 @@
+{
+ "provinsi": "Bali",
+ "slug": "bali",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025",
+ "tanggal_sk": "2025-12-23",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://cloud-ng.baliprov.go.id/disnakeresdm/2025/12/PENGUMUMAN-DAN-SK-UMK-UMSK-TAHUN-2026.pdf",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bali/#kabupaten-jembrana",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bali/#kabupaten-tabanan",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bali/#kabupaten-badung",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bali/#kabupaten-gianyar",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/bali/#kabupaten-klungkung",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Badung",
+   "jenis": "Kabupaten",
+   "umk": 3791002.57,
+   "kode_bps": "5103",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kota Denpasar",
+   "jenis": "Kota",
+   "umk": 3499878.78,
+   "kode_bps": "5171",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Gianyar",
+   "jenis": "Kabupaten",
+   "umk": 3316798.48,
+   "kode_bps": "5104",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Tabanan",
+   "jenis": "Kabupaten",
+   "umk": 3287678.87,
+   "kode_bps": "5102",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Jembrana",
+   "jenis": "Kabupaten",
+   "umk": 3207459,
+   "kode_bps": "5101",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Klungkung",
+   "jenis": "Kabupaten",
+   "umk": 3207459,
+   "kode_bps": "5105",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Bangli",
+   "jenis": "Kabupaten",
+   "umk": 3207459,
+   "kode_bps": "5106",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Karang Asem",
+   "jenis": "Kabupaten",
+   "umk": 3207459,
+   "kode_bps": "5107",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  },
+  {
+   "nama": "Kabupaten Buleleng",
+   "jenis": "Kabupaten",
+   "umk": 3207459,
+   "kode_bps": "5108",
+   "nomor_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025"
+  }
+ ]
+}

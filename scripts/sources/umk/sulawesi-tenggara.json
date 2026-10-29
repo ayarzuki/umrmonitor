@@ -1,0 +1,110 @@
+{
+ "provinsi": "Sulawesi Tenggara",
+ "slug": "sulawesi-tenggara",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 100.3.3.1/583 Tahun 2025",
+ "tanggal_sk": "2026-02-04",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-sulawesi-tenggara-2026-wylV1",
+   "tipe": "berita",
+   "judul": "15 baris cocok",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://dealls.com/pengembangan-karir/ump-sulawesi-tenggara",
+   "tipe": "berita",
+   "judul": "sumber tambahan",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Kolaka",
+   "jenis": "Kabupaten",
+   "umk": 3688130.0
+  },
+  {
+   "nama": "Kota Kendari",
+   "jenis": "Kota",
+   "umk": 3516070.0
+  },
+  {
+   "nama": "Kabupaten Konawe Utara",
+   "jenis": "Kabupaten",
+   "umk": 3510505.7
+  },
+  {
+   "nama": "Kabupaten Konawe Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3306496.18
+  },
+  {
+   "nama": "Kota Baubau",
+   "jenis": "Kota",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Bombana",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Buton",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Buton Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Buton Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Buton Utara",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Kolaka Timur",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Kolaka Utara",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Konawe",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Konawe Kepulauan",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Muna",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Muna Barat",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  },
+  {
+   "nama": "Kabupaten Wakatobi",
+   "jenis": "Kabupaten",
+   "umk": 3306496.0
+  }
+ ]
+}

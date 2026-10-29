@@ -1,0 +1,69 @@
+{
+ "provinsi": "Maluku",
+ "slug": "maluku",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 5434 Tahun 2025",
+ "tanggal_sk": "2026-02-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-maluku-2026-kota-ambon-naik-6-AYiqG",
+   "tipe": "berita",
+   "judul": "10 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Ambon",
+   "jenis": "Kota",
+   "umk": 3381225.0
+  },
+  {
+   "nama": "Kota Tual",
+   "jenis": "Kota",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Buru",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Buru Selatan",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Aru",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Maluku Barat Daya",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Maluku Tengah",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Maluku Tenggara",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Seram Bagian Barat",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  },
+  {
+   "nama": "Kabupaten Seram Bagian Timur",
+   "jenis": "Kabupaten",
+   "umk": 3334490.0
+  }
+ ]
+}

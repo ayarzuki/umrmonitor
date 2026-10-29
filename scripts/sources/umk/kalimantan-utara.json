@@ -1,0 +1,44 @@
+{
+ "provinsi": "Kalimantan Utara",
+ "slug": "kalimantan-utara",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/umk-kalimantan-utara-2026-kota-tarakan-tembus-rp474-juta-XEoGg",
+   "tipe": "berita",
+   "judul": "5 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Tarakan",
+   "jenis": "Kota",
+   "umk": 4742169.0
+  },
+  {
+   "nama": "Kabupaten Malinau",
+   "jenis": "Kabupaten",
+   "umk": 4040073.0
+  },
+  {
+   "nama": "Kabupaten Bulungan",
+   "jenis": "Kabupaten",
+   "umk": 3900396.0
+  },
+  {
+   "nama": "Kabupaten Tana Tidung",
+   "jenis": "Kabupaten",
+   "umk": 3870800.0
+  },
+  {
+   "nama": "Kabupaten Nunukan",
+   "jenis": "Kabupaten",
+   "umk": 3845251.0
+  }
+ ]
+}

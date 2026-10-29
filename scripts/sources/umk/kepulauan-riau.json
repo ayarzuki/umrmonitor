@@ -1,0 +1,54 @@
+{
+ "provinsi": "Kepulauan Riau",
+ "slug": "kepulauan-riau",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 1332 Tahun 2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-kepulauan-riau-2026-kota-batam-naik-7-5FDJ8",
+   "tipe": "berita",
+   "judul": "7 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Batam",
+   "jenis": "Kota",
+   "umk": 5357982.0
+  },
+  {
+   "nama": "Kabupaten Bintan",
+   "jenis": "Kabupaten",
+   "umk": 4583221.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Anambas",
+   "jenis": "Kabupaten",
+   "umk": 4279851.0
+  },
+  {
+   "nama": "Kabupaten Karimun",
+   "jenis": "Kabupaten",
+   "umk": 4241935.0
+  },
+  {
+   "nama": "Kota Tanjung Pinang",
+   "jenis": "Kota",
+   "umk": 3879520.0
+  },
+  {
+   "nama": "Kabupaten Lingga",
+   "jenis": "Kabupaten",
+   "umk": 3879520.0
+  },
+  {
+   "nama": "Kabupaten Natuna",
+   "jenis": "Kabupaten",
+   "umk": 3879520.0
+  }
+ ]
+}

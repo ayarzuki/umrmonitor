@@ -1,4 +1,14 @@
 import { spawn } from "node:child_process";
+import fs from "node:fs";
+
+const umkDataset = JSON.parse(
+  fs.readFileSync(new URL("../public/data/umk-2026.json", import.meta.url), "utf8")
+);
+
+function formatRupiahBulat(num) {
+  const bulat = Math.round(Number(num));
+  return "Rp" + String(bulat).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
 
 const args = process.argv.slice(2);
 const baseArg = args.find((a) => a.startsWith("--base="));
@@ -210,6 +220,36 @@ async function run() {
       check("GET /provinsi/* menampilkan tanggal Indonesia (1 Januari 2026), bukan ISO", ok, `status=${res.status}`);
     }
 
+    const sortedUmk = [...umkDataset.kota].sort((a, b) => b.umk - a.umk);
+    const topKota = sortedUmk[0];
+    const topKotaRp = formatRupiahBulat(topKota.umk);
+    const provDenganUmk =
+      umkDataset.cakupan.find((c) => c.jumlah_umk > 0)?.slug || topKota.provinsi_slug;
+
+    // 7d. Semua nominal rupiah bilangan bulat — tidak ada "Rp3.100.881,40"
+    {
+      const pages = [
+        "/",
+        "/kota",
+        `/kota/${topKota.slug}`,
+        "/provinsi/sulawesi-tengah",
+        "/provinsi/aceh",
+        `/provinsi/${provDenganUmk}`,
+      ];
+      const offenders = [];
+      for (const p of pages) {
+        const res = await fetch(`${baseUrl}${p}`);
+        const html = await res.text();
+        const found = html.match(/Rp\d{1,3}(?:\.\d{3})*,\d{2}\b/g) || [];
+        if (found.length) offenders.push(`${p}: ${found.slice(0, 3).join(", ")}`);
+      }
+      check(
+        "Semua nominal rupiah bilangan bulat (tanpa sen)",
+        offenders.length === 0,
+        offenders.length ? offenders.join(" | ") : "tidak ada Rp dengan desimal"
+      );
+    }
+
     // 8. POST subscribe email valid -> ok:true
     {
       const res = await fetch(`${baseUrl}/api/subscribe`, {
@@ -250,6 +290,216 @@ async function run() {
         "Total kenaikan tertinggi = Sulawesi Tengah 9.08%",
         top && top.provinsi === "Sulawesi Tengah" && top.kenaikan_persen === 9.08,
         `top=${top?.provinsi} (${top?.kenaikan_persen}%)`
+      );
+    }
+
+    // 11. /kota 200 dan memuat nama + nominal UMK tertinggi nasional (format Rp<bulat>) + #cari-kota
+    let kotaHtml = "";
+    {
+      const res = await fetch(`${baseUrl}/kota`);
+      kotaHtml = await res.text();
+      const ok =
+        res.status === 200 &&
+        kotaHtml.includes(topKota.nama) &&
+        kotaHtml.includes(topKotaRp) &&
+        kotaHtml.includes('id="cari-kota"');
+      check(
+        `GET /kota 200 & memuat UMK tertinggi nasional (${topKota.nama} ${topKotaRp})`,
+        ok,
+        `status=${res.status}, top=${topKota.nama} ${topKotaRp}`
+      );
+    }
+
+    // 12. jumlah baris tabel di /kota = jumlah_kota (hitung kemunculan href="/kota/)
+    {
+      const hrefCount = (kotaHtml.match(/href="\/kota\//g) || []).length;
+      check(
+        "Jumlah baris tabel di /kota === jumlah_kota (hitung href=\"/kota/\")",
+        hrefCount === umkDataset.jumlah_kota,
+        `hrefCount=${hrefCount}, jumlah_kota=${umkDataset.jumlah_kota}`
+      );
+    }
+
+    // 13. /kota/<slug-tertinggi> 200, memuat nominal + nomor SK + minimal satu sumber_url sebagai link
+    {
+      const res = await fetch(`${baseUrl}/kota/${topKota.slug}`);
+      const html = await res.text();
+      const hasSumberLink =
+        Array.isArray(topKota.sumber_url) &&
+        topKota.sumber_url.length > 0 &&
+        topKota.sumber_url.some((u) => html.includes(`href="${u}"`));
+      const ok =
+        res.status === 200 &&
+        html.includes(topKotaRp) &&
+        (!topKota.nomor_sk || html.includes(topKota.nomor_sk)) &&
+        hasSumberLink;
+      check(
+        `GET /kota/${topKota.slug} 200 & memuat nominal + nomor SK + link sumber_url`,
+        ok,
+        `status=${res.status}, hasSumberLink=${hasSumberLink}`
+      );
+    }
+
+    // 14. /kota/tidak-ada -> 404
+    {
+      const res = await fetch(`${baseUrl}/kota/tidak-ada`);
+      check(
+        "GET /kota/tidak-ada mengembalikan 404",
+        res.status === 404,
+        `status=${res.status}`
+      );
+    }
+
+    // 15. /api/umk jumlah = jumlah_kota; /api/umk?provinsi=jawa-barat hanya berisi daerah Jawa Barat
+    {
+      const resAll = await fetch(`${baseUrl}/api/umk`);
+      const bodyAll = await resAll.json();
+      const resJabar = await fetch(`${baseUrl}/api/umk?provinsi=jawa-barat`);
+      const bodyJabar = await resJabar.json();
+      const expectedJabarCount = umkDataset.kota.filter(
+        (k) => k.provinsi_slug === "jawa-barat"
+      ).length;
+      const onlyJabar =
+        Array.isArray(bodyJabar.kota) &&
+        bodyJabar.kota.length === expectedJabarCount &&
+        bodyJabar.kota.every((k) => k.provinsi_slug === "jawa-barat");
+      const ok =
+        resAll.status === 200 &&
+        bodyAll.jumlah === umkDataset.jumlah_kota &&
+        Array.isArray(bodyAll.kota) &&
+        bodyAll.kota.length === umkDataset.jumlah_kota &&
+        resJabar.status === 200 &&
+        onlyJabar;
+      check(
+        "GET /api/umk jumlah === jumlah_kota & ?provinsi=jawa-barat hanya berisi daerah Jawa Barat",
+        ok,
+        `all=${bodyAll.jumlah}/${umkDataset.jumlah_kota}, jabar=${bodyJabar.jumlah}/${expectedJabarCount}`
+      );
+    }
+
+    // 16. /api/umk/<slug> 200; /api/umk/tidak-ada -> 404
+    {
+      const resOk = await fetch(`${baseUrl}/api/umk/${topKota.slug}`);
+      const bodyOk = await resOk.json();
+      const res404 = await fetch(`${baseUrl}/api/umk/tidak-ada`);
+      const ok =
+        resOk.status === 200 &&
+        bodyOk.slug === topKota.slug &&
+        bodyOk.umk === topKota.umk &&
+        res404.status === 404;
+      check(
+        `GET /api/umk/${topKota.slug} 200 & GET /api/umk/tidak-ada 404`,
+        ok,
+        `statusOk=${resOk.status}, status404=${res404.status}`
+      );
+    }
+
+    // 17. /api/meta memuat jumlah_kota
+    {
+      const res = await fetch(`${baseUrl}/api/meta`);
+      const body = await res.json();
+      const ok =
+        res.status === 200 &&
+        body.jumlah_kota === umkDataset.jumlah_kota &&
+        body.jumlah_provinsi_dengan_umk === umkDataset.jumlah_provinsi_dengan_umk;
+      check(
+        "GET /api/meta memuat jumlah_kota & jumlah_provinsi_dengan_umk",
+        ok,
+        `jumlah_kota=${body.jumlah_kota}, jumlah_provinsi_dengan_umk=${body.jumlah_provinsi_dengan_umk}`
+      );
+    }
+
+    // 18. /provinsi/<slug-provinsi-dengan-umk> memuat tabel kab/kota (minimal 1 href="/kota/)
+    {
+      const res = await fetch(`${baseUrl}/provinsi/${provDenganUmk}`);
+      const html = await res.text();
+      const count = (html.match(/href="\/kota\//g) || []).length;
+      check(
+        `GET /provinsi/${provDenganUmk} memuat tabel kab/kota (minimal 1 href="/kota/")`,
+        res.status === 200 && count >= 1,
+        `status=${res.status}, hrefKotaCount=${count}`
+      );
+    }
+
+    // 19. Setiap halaman /kota/<slug> (sampel 5 daerah acak deterministik) memuat dicek_pada
+    {
+      const sampleCount = 5;
+      const samples = [];
+      for (let i = 0; i < sampleCount; i++) {
+        const idx = Math.floor(((i * 73 + 17) % umkDataset.kota.length));
+        samples.push(umkDataset.kota[idx]);
+      }
+      const missing = [];
+      for (const s of samples) {
+        const res = await fetch(`${baseUrl}/kota/${s.slug}`);
+        const html = await res.text();
+        if (res.status !== 200 || !html.includes(s.dicek_pada)) {
+          missing.push(s.slug);
+        }
+      }
+      check(
+        "Sampel 5 halaman /kota/<slug> acak deterministik memuat dicek_pada",
+        missing.length === 0,
+        missing.length
+          ? `missing=${missing.join(",")}`
+          : `5/5 OK (${samples.map((s) => s.slug).join(", ")})`
+      );
+    }
+
+    // 20. ANCHOR: nominal patokan yang angkanya tidak diambil dari dataset, supaya
+    // kerusakan/geseran data ketahuan. Nilai-nilai ini sudah dicocokkan ke SK/berita
+    // di scripts/sources/umk/<provinsi>.json dan lolos verify-sources.mjs.
+    {
+      const anchors = [
+        { slug: "kota-bekasi", rp: "Rp5.999.443" },
+        { slug: "kota-surabaya", rp: "Rp5.288.796" },
+        { slug: "kota-bandung", rp: "Rp4.737.678" },
+        { slug: "kota-makassar", rp: "Rp4.148.179" },
+        { slug: "kota-banda-aceh", rp: "Rp4.162.965" },
+      ];
+      const wrong = [];
+      for (const a of anchors) {
+        const res = await fetch(`${baseUrl}/kota/${a.slug}`);
+        const html = await res.text();
+        if (res.status !== 200 || !html.includes(a.rp)) wrong.push(`${a.slug}≠${a.rp}`);
+      }
+      check(
+        "Anchor 5 nominal UMK cocok dengan SK/berita (bukan dari dataset)",
+        wrong.length === 0,
+        wrong.length ? wrong.join(" | ") : "5/5 cocok"
+      );
+    }
+
+    // 21. POST /api/subscribe benar-benar menyimpan (baca balik lewat /api/subscribe/jumlah).
+    // Ini menutup celah "sukses palsu": dulu worker membalas ok:true meski KV tidak ter-bind.
+    {
+      const jumlahUrl = `${baseUrl}/api/subscribe/jumlah`;
+      const before = await (await fetch(jumlahUrl)).json();
+      const email = `uji-validator@contoh-umkm.co.id`;
+      const post = await fetch(`${baseUrl}/api/subscribe`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const postBody = await post.json();
+      // KV Cloudflare eventually consistent: jumlah bisa telat sampai ~60 detik.
+      let after = await (await fetch(jumlahUrl)).json();
+      const deadline = Date.now() + 75000;
+      while (
+        typeof after.jumlah === "number" &&
+        typeof before.jumlah === "number" &&
+        after.jumlah === before.jumlah &&
+        Date.now() < deadline
+      ) {
+        await sleep(5000);
+        after = await (await fetch(jumlahUrl)).json();
+      }
+      const grew = typeof before.jumlah === "number" && after.jumlah === before.jumlah + 1;
+      check(
+        "POST /api/subscribe benar-benar menambah 1 langganan (dibaca balik dari KV)",
+        post.status === 200 && postBody.ok === true && grew,
+        `status=${post.status}, ok=${postBody.ok}, sebelum=${before.jumlah}, sesudah=${after.jumlah}` +
+          (grew ? "" : " — catatan: jalankan ulang setelah kunci uji dihapus")
       );
     }
 

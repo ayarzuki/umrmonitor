@@ -1,0 +1,59 @@
+{
+ "provinsi": "Papua Tengah",
+ "slug": "papua-tengah",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 100.3.3.1/337 Tahun 2025",
+ "tanggal_sk": "2026-02-05",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-papua-tengah-2026-FNgL2",
+   "tipe": "berita",
+   "judul": "8 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Mimika",
+   "jenis": "Kabupaten",
+   "umk": 5005678.0
+  },
+  {
+   "nama": "Kabupaten Deiyai",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Dogiyai",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Intan Jaya",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Nabire",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Paniai",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Puncak",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  },
+  {
+   "nama": "Kabupaten Puncak Jaya",
+   "jenis": "Kabupaten",
+   "umk": 4285848.0
+  }
+ ]
+}

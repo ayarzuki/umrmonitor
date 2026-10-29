@@ -1,0 +1,69 @@
+{
+ "provinsi": "Nusa Tenggara Barat",
+ "slug": "nusa-tenggara-barat",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 100.3.3.1-683 Tahun 2025",
+ "tanggal_sk": "2026-01-08",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-nusa-tenggara-barat-2026-u5Lp9",
+   "tipe": "berita",
+   "judul": "10 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Sumbawa Barat",
+   "jenis": "Kabupaten",
+   "umk": 3136468.0
+  },
+  {
+   "nama": "Kota Mataram",
+   "jenis": "Kota",
+   "umk": 3019015.0
+  },
+  {
+   "nama": "Kota Bima",
+   "jenis": "Kota",
+   "umk": 2831163.0
+  },
+  {
+   "nama": "Kabupaten Bima",
+   "jenis": "Kabupaten",
+   "umk": 2767580.0
+  },
+  {
+   "nama": "Kabupaten Lombok Utara",
+   "jenis": "Kabupaten",
+   "umk": 2758221.0
+  },
+  {
+   "nama": "Kabupaten Dompu",
+   "jenis": "Kabupaten",
+   "umk": 2751290.0
+  },
+  {
+   "nama": "Kabupaten Sumbawa",
+   "jenis": "Kabupaten",
+   "umk": 2747478.0
+  },
+  {
+   "nama": "Kabupaten Lombok Timur",
+   "jenis": "Kabupaten",
+   "umk": 2744628.0
+  },
+  {
+   "nama": "Kabupaten Lombok Tengah",
+   "jenis": "Kabupaten",
+   "umk": 2741526.0
+  },
+  {
+   "nama": "Kabupaten Lombok Barat",
+   "jenis": "Kabupaten",
+   "umk": 2712254.0
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "provinsi": "Sulawesi Selatan",
+ "slug": "sulawesi-selatan",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 2142/XII/Tahun 2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-selatan-2026-kota-makassar-naik-6-l7raV",
+   "tipe": "berita",
+   "judul": "24 baris cocok",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Makassar",
+   "jenis": "Kota",
+   "umk": 4148179.0
+  },
+  {
+   "nama": "Kabupaten Pangkajene Dan Kepulauan",
+   "jenis": "Kabupaten",
+   "umk": 4032248.0
+  },
+  {
+   "nama": "Kabupaten Luwu Timur",
+   "jenis": "Kabupaten",
+   "umk": 3961166.0
+  },
+  {
+   "nama": "Kota Palopo",
+   "jenis": "Kota",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kota Parepare",
+   "jenis": "Kota",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Bantaeng",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Barru",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Bone",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Bulukumba",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Enrekang",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Gowa",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Jeneponto",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Kepulauan Selayar",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Luwu",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Luwu Utara",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Maros",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Pinrang",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Sidenreng Rappang",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Sinjai",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Soppeng",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Takalar",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Tana Toraja",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Toraja Utara",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  },
+  {
+   "nama": "Kabupaten Wajo",
+   "jenis": "Kabupaten",
+   "umk": 3921088.0
+  }
+ ]
+}

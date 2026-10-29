@@ -1,0 +1,6 @@
+/data/*
+  Cache-Control: public, max-age=3600
+/
+  Cache-Control: public, max-age=300
+/*
+  Cache-Control: public, max-age=300

@@ -1,0 +1,19 @@
+{
+ "provinsi": "Gorontalo",
+ "slug": "gorontalo",
+ "tahun": 2026,
+ "nomor_sk": null,
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "status": "tanpa-umk",
+ "catatan": "Tidak menetapkan UMK 2026: seluruh kabupaten/kota memakai UMP Rp3.405.144: sumber menyatakan semua daerah menggunakan UMP.",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/daftar-umk-gorontalo-2026-semua-daerah-gunakan-ump-uNVQv",
+   "tipe": "berita",
+   "judul": "konfirmasi status UMK",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": []
+}

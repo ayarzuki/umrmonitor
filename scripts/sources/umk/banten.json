@@ -1,0 +1,111 @@
+{
+ "provinsi": "Banten",
+ "slug": "banten",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://ppid.bantenprov.go.id/storage/document/kepgub-banten-upah-minimum-kabupaten-dan-kota-tahun-2026-202512241557.pdf",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/banten/#kabupaten-pandeglang",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/banten/#kabupaten-lebak",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/banten/#kabupaten-tangerang",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/banten/#kabupaten-serang",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/banten/#kota-tangerang",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Cilegon",
+   "jenis": "Kota",
+   "umk": 5469922.59,
+   "kode_bps": "3672",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kota Tangerang",
+   "jenis": "Kota",
+   "umk": 5399405.69,
+   "kode_bps": "3671",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kota Tangerang Selatan",
+   "jenis": "Kota",
+   "umk": 5247870,
+   "kode_bps": "3674",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Tangerang",
+   "jenis": "Kabupaten",
+   "umk": 5210377,
+   "kode_bps": "3603",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Serang",
+   "jenis": "Kabupaten",
+   "umk": 5178521.19,
+   "kode_bps": "3604",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kota Serang",
+   "jenis": "Kota",
+   "umk": 4665927.94,
+   "kode_bps": "3673",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Pandeglang",
+   "jenis": "Kabupaten",
+   "umk": 3360078.06,
+   "kode_bps": "3601",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Lebak",
+   "jenis": "Kabupaten",
+   "umk": 3330010.62,
+   "kode_bps": "3602",
+   "nomor_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025"
+  }
+ ]
+}

@@ -1,4 +1,5 @@
 import dataset from "../public/data/ump-2026.json";
+import umkDataset from "../public/data/umk-2026.json";
 
 const CORS_HEADERS = {
   "access-control-allow-origin": "*",
@@ -16,16 +17,13 @@ function escapeHtml(str) {
 }
 
 export function formatRupiah(num) {
+  // Standar tampilan: SELALU bilangan bulat, tanpa desimal — "Rp3.932.552".
+  // Nilai dengan sen (mis. 3.100.881,40) dibulatkan ke rupiah terdekat.
   const n = Number(num);
-  const cents = Math.round(n * 100) % 100;
-  const isInt = Number.isInteger(n) || cents === 0;
-  const fixed = n.toFixed(2);
-  const [intPart, decPart] = fixed.split(".");
-  const formattedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  if (isInt) {
-    return `Rp${formattedInt}`;
-  }
-  return `Rp${formattedInt},${decPart}`;
+  if (!Number.isFinite(n)) return "—";
+  const bulat = Math.round(n);
+  const formattedInt = String(bulat).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return `Rp${formattedInt}`;
 }
 
 function formatTanggalID(iso) {
@@ -272,6 +270,15 @@ const BASE_STYLES = `
   }
 `;
 
+function formatSelisih(num) {
+  const n = Number(num);
+  if (!Number.isFinite(n)) return "—";
+  const bulat = Math.round(n);
+  if (bulat > 0) return `+${formatRupiah(bulat)}`;
+  if (bulat < 0) return `-${formatRupiah(Math.abs(bulat))}`;
+  return "Rp0";
+}
+
 function renderHomePage() {
   const rowsHtml = dataset.provinsi
     .map((p, idx) => {
@@ -285,6 +292,23 @@ function renderHomePage() {
       </tr>`;
     })
     .join("\n");
+
+  const sortedUmkDesc = [...umkDataset.kota].sort((a, b) => b.umk - a.umk);
+  const sortedUmkAsc = [...umkDataset.kota].sort((a, b) => a.umk - b.umk);
+  const top5Umk = sortedUmkDesc.slice(0, 5);
+  const bottom5Umk = sortedUmkAsc.slice(0, 5);
+
+  const renderMiniUmkRows = (list) =>
+    list
+      .map(
+        (k, i) => `<tr>
+          <td>${i + 1}</td>
+          <td><a href="/kota/${escapeHtml(k.slug)}">${escapeHtml(k.nama)}</a></td>
+          <td><a href="/provinsi/${escapeHtml(k.provinsi_slug)}">${escapeHtml(k.provinsi)}</a></td>
+          <td class="num">${formatRupiah(k.umk)}</td>
+        </tr>`
+      )
+      .join("\n");
 
   const tanggalCek = dataset.provinsi[0]?.dicek_pada || dataset.dibuat;
   const sumberLinks = dataset.sumber_rekapitulasi
@@ -300,7 +324,7 @@ function renderHomePage() {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UMRO Monitor — Upah minimum Indonesia, bertanggal dan bisa dicek.</title>
-  <meta name="description" content="Tabel Upah Minimum Provinsi (UMP) Indonesia 2026 lengkap 38 provinsi beserta nomor SK, dasar hukum PP No. 49 Tahun 2025, dan tautan sumber.">
+  <meta name="description" content="Tabel Upah Minimum Provinsi (UMP) Indonesia 2026 lengkap 38 provinsi dan UMK Kabupaten/Kota beserta nomor SK, dasar hukum PP No. 49 Tahun 2025, dan tautan sumber.">
   <style>${BASE_STYLES}</style>
 </head>
 <body>
@@ -313,6 +337,7 @@ function renderHomePage() {
         <span class="badge">berlaku 1 Januari 2026</span>
         <span class="badge">${escapeHtml(dataset.dasar_hukum)}</span>
       </div>
+      <p style="margin:0.85rem 0 0 0;"><a href="/kota">Lihat tabel UMK ${escapeHtml(umkDataset.jumlah_kota)} kabupaten/kota di ${escapeHtml(umkDataset.jumlah_provinsi_dengan_umk)} provinsi &rarr;</a></p>
     </header>
 
     <main>
@@ -332,6 +357,49 @@ function renderHomePage() {
           </tbody>
         </table>
       </div>
+
+      <section class="box" id="umk-kabupaten-kota">
+        <h2>UMK kabupaten/kota 2026</h2>
+        <p>Cakupan: <strong>${escapeHtml(umkDataset.jumlah_kota)} kabupaten/kota di ${escapeHtml(umkDataset.jumlah_provinsi_dengan_umk)} provinsi</strong>. <a href="/kota">Lihat daftar lengkap UMK kabupaten/kota &rarr;</a></p>
+        <div class="dl-grid">
+          <div>
+            <h3 style="margin:0 0 0.5rem 0;font-size:1rem;">5 UMK Tertinggi Nasional</h3>
+            <div class="table-wrap" style="margin-bottom:0;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Kabupaten/Kota</th>
+                    <th>Provinsi</th>
+                    <th class="num">UMK 2026</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${renderMiniUmkRows(top5Umk)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:0 0 0.5rem 0;font-size:1rem;">5 UMK Terendah Nasional</h3>
+            <div class="table-wrap" style="margin-bottom:0;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Kabupaten/Kota</th>
+                    <th>Provinsi</th>
+                    <th class="num">UMK 2026</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${renderMiniUmkRows(bottom5Umk)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="box" id="sumber-data">
         <h2>Sumber &amp; tanggal cek</h2>
@@ -408,6 +476,55 @@ function renderProvinsiPage(p) {
     )
     .join("\n");
 
+  const kotaProv = umkDataset.kota.filter((k) => k.provinsi_slug === p.slug);
+  const cakupanProv = (umkDataset.cakupan || []).find((c) => c.slug === p.slug);
+
+  let umkSectionHtml = "";
+  if (kotaProv.length > 0) {
+    const kotaRows = kotaProv
+      .map(
+        (k, idx) => `<tr>
+          <td>${idx + 1}</td>
+          <td><a href="/kota/${escapeHtml(k.slug)}">${escapeHtml(k.nama)}</a></td>
+          <td class="num">${formatRupiah(k.umk)}</td>
+          <td class="num">${formatSelisih(k.selisih_ump)}</td>
+          <td>${escapeHtml(k.nomor_sk || "—")}</td>
+        </tr>`
+      )
+      .join("\n");
+
+    umkSectionHtml = `<section class="box" id="umk-provinsi">
+      <h2>UMK Kabupaten/Kota di ${escapeHtml(p.provinsi)} (${kotaProv.length} daerah)</h2>
+      ${cakupanProv && cakupanProv.catatan ? `<p>${escapeHtml(cakupanProv.catatan)}</p>` : ""}
+      <p><a href="/kota?provinsi=${escapeHtml(p.slug)}">Filter daftar UMK untuk ${escapeHtml(p.provinsi)} &rarr;</a></p>
+      <div class="table-wrap" style="margin-bottom:0;">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Kabupaten/Kota</th>
+              <th class="num">UMK 2026</th>
+              <th class="num">Selisih vs UMP provinsi</th>
+              <th>SK</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${kotaRows}
+          </tbody>
+        </table>
+      </div>
+    </section>`;
+  } else {
+    const catatanTidakAda =
+      (cakupanProv && cakupanProv.catatan) ||
+      "Provinsi ini tidak menetapkan UMK kabupaten/kota terpisah; seluruh wilayah menggunakan UMP provinsi.";
+    umkSectionHtml = `<section class="box" id="umk-provinsi">
+      <h2>UMK Kabupaten/Kota di ${escapeHtml(p.provinsi)}</h2>
+      <p>${escapeHtml(catatanTidakAda)}</p>
+      <p><a href="/kota?provinsi=${escapeHtml(p.slug)}">Lihat halaman UMK (${escapeHtml(p.provinsi)})</a> | <a href="/kota">Lihat seluruh UMK kabupaten/kota &rarr;</a></p>
+    </section>`;
+  }
+
   return `<!DOCTYPE html>
 <html lang="id">
 <head>
@@ -420,7 +537,7 @@ function renderProvinsiPage(p) {
 <body>
   <div class="container">
     <header>
-      <p style="margin:0 0 0.5rem 0;"><a href="/">&larr; Kembali ke tabel 38 provinsi</a></p>
+      <p style="margin:0 0 0.5rem 0;"><a href="/">&larr; Kembali ke tabel 38 provinsi</a> | <a href="/kota">Daftar UMK Kabupaten/Kota</a></p>
       <h1>UMP ${escapeHtml(p.provinsi)} 2026</h1>
       <p class="tagline">UMRO Monitor — Upah minimum Indonesia, bertanggal dan bisa dicek.</p>
       <div class="badges">
@@ -466,10 +583,267 @@ function renderProvinsiPage(p) {
         </ul>
         <p style="margin-top:1rem;"><a href="/">&larr; Lihat perbandingan UMP 38 provinsi Indonesia</a></p>
       </section>
+
+      ${umkSectionHtml}
     </main>
 
     <footer>
       Data dicek 29 Oktober 2026. Angka bisa berubah bila gubernur merevisi SK.
+    </footer>
+  </div>
+</body>
+</html>`;
+}
+
+function renderKotaListPage(provinsiSlug) {
+  const allKota = umkDataset.kota || [];
+  const filteredKota = provinsiSlug
+    ? allKota.filter((k) => k.provinsi_slug === provinsiSlug)
+    : allKota;
+
+  const basisRingkasan = filteredKota.length > 0 ? filteredKota : allKota;
+  const sortedDesc = [...basisRingkasan].sort((a, b) => b.umk - a.umk);
+  const sortedAsc = [...basisRingkasan].sort((a, b) => a.umk - b.umk);
+  const tertinggi = sortedDesc[0];
+  const terendah = sortedAsc[0];
+
+  const rowsHtml = filteredKota
+    .map(
+      (k, idx) => `<tr data-nama="${escapeHtml(k.nama.toLowerCase())}" data-provinsi="${escapeHtml(k.provinsi.toLowerCase())}">
+        <td>${idx + 1}</td>
+        <td><a href="/kota/${escapeHtml(k.slug)}">${escapeHtml(k.nama)}</a></td>
+        <td><a href="/provinsi/${escapeHtml(k.provinsi_slug)}">${escapeHtml(k.provinsi)}</a></td>
+        <td class="num">${formatRupiah(k.umk)}</td>
+        <td class="num">${formatSelisih(k.selisih_ump)}</td>
+        <td>${escapeHtml(k.nomor_sk || "—")}</td>
+      </tr>`
+    )
+    .join("\n");
+
+  const provinsiOptions = (umkDataset.cakupan || [])
+    .filter((c) => c.jumlah_umk > 0)
+    .map(
+      (c) =>
+        `<option value="${escapeHtml(c.slug)}"${c.slug === provinsiSlug ? " selected" : ""}>${escapeHtml(c.provinsi)} (${escapeHtml(c.jumlah_umk)})</option>`
+    )
+    .join("\n");
+
+  const cakupanProv = provinsiSlug
+    ? (umkDataset.cakupan || []).find((c) => c.slug === provinsiSlug)
+    : null;
+
+  return `<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar UMK Kabupaten/Kota Indonesia ${escapeHtml(umkDataset.tahun)} | UMRO Monitor</title>
+  <meta name="description" content="Tabel Upah Minimum Kabupaten/Kota (UMK) Indonesia ${escapeHtml(umkDataset.tahun)}: ${escapeHtml(umkDataset.jumlah_kota)} kabupaten/kota di ${escapeHtml(umkDataset.jumlah_provinsi_dengan_umk)} provinsi beserta selisih terhadap UMP dan nomor SK.">
+  <style>${BASE_STYLES}</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p style="margin:0 0 0.5rem 0;"><a href="/">&larr; Kembali ke tabel UMP 38 provinsi</a></p>
+      <h1>Daftar UMK Kabupaten/Kota ${escapeHtml(umkDataset.tahun)}</h1>
+      <p class="tagline">Cakupan: ${escapeHtml(umkDataset.jumlah_kota)} kabupaten/kota di ${escapeHtml(umkDataset.jumlah_provinsi_dengan_umk)} provinsi${umkDataset.jumlah_kab_kota_nasional ? ` — dari ${escapeHtml(umkDataset.jumlah_kab_kota_nasional)} kabupaten/kota nasional` : ""}.</p>
+      <p class="tagline" style="font-size:0.82rem;">Setiap baris mencantumkan nomor SK dan URL sumber. Daerah yang belum tercatat di sini memakai UMP provinsinya, atau UMK-nya belum kami temukan di sumber yang dibaca — bukan berarti tidak ada.</p>
+      <div class="badges">
+        <span class="badge badge-year">${escapeHtml(umkDataset.tahun)}</span>
+        <span class="badge">${escapeHtml(umkDataset.dasar_hukum)}</span>
+        <span class="badge">${escapeHtml(umkDataset.jumlah_kota)} kabupaten/kota di ${escapeHtml(umkDataset.jumlah_provinsi_dengan_umk)} provinsi</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="box" id="ringkasan-umk">
+        <h2>Ringkasan UMK ${provinsiSlug && cakupanProv ? escapeHtml(cakupanProv.provinsi) : "Nasional"}</h2>
+        <div class="dl-grid">
+          <div class="dl-item">
+            <div class="dl-label">UMK Tertinggi</div>
+            <div class="dl-val">${tertinggi ? `${escapeHtml(tertinggi.nama)} — ${formatRupiah(tertinggi.umk)}` : "—"}</div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">UMK Terendah</div>
+            <div class="dl-val">${terendah ? `${escapeHtml(terendah.nama)} — ${formatRupiah(terendah.umk)}` : "—"}</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;margin-top:0.75rem;">
+          <div style="flex:1;min-width:220px;">
+            <label for="cari-kota" style="display:block;font-size:0.82rem;color:var(--muted);margin-bottom:0.25rem;">Cari kabupaten/kota:</label>
+            <input type="search" id="cari-kota" placeholder="Ketik nama kabupaten atau kota..." style="width:100%;padding:0.55rem 0.75rem;border:1px solid #cbd5e1;border-radius:6px;font-size:0.95rem;">
+          </div>
+          <form method="GET" action="/kota" style="display:flex;gap:0.5rem;align-items:flex-end;flex-wrap:wrap;">
+            <div>
+              <label for="pilih-provinsi" style="display:block;font-size:0.82rem;color:var(--muted);margin-bottom:0.25rem;">Filter provinsi:</label>
+              <select id="pilih-provinsi" name="provinsi" style="padding:0.55rem 0.75rem;border:1px solid #cbd5e1;border-radius:6px;font-size:0.95rem;">
+                <option value="">Semua provinsi (${escapeHtml(umkDataset.jumlah_kota)})</option>
+                ${provinsiOptions}
+              </select>
+            </div>
+            <button type="submit" style="padding:0.58rem 0.9rem;border:none;border-radius:6px;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;">Terapkan</button>
+            ${provinsiSlug ? `<a href="/kota" style="padding:0.55rem 0.65rem;">Reset</a>` : ""}
+          </form>
+        </div>
+        ${provinsiSlug && filteredKota.length === 0 ? `<p style="margin-top:0.75rem;">${escapeHtml(cakupanProv?.catatan || "Tidak ada data UMK untuk filter provinsi ini.")}</p>` : ""}
+      </section>
+
+      <div class="table-wrap">
+        <table id="tabel-kota">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Kabupaten/Kota</th>
+              <th>Provinsi</th>
+              <th class="num">UMK 2026</th>
+              <th class="num">Selisih vs UMP provinsi</th>
+              <th>SK</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-kota">
+            ${rowsHtml}
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      Data dicek 29 Oktober 2026 (${escapeHtml(umkDataset.dicek_pada)}). Angka bisa berubah bila gubernur merevisi SK.<br>
+      Sebagian data berasal dari kompilasi <a href="${escapeHtml(umkDataset.kompilasi?.url || "https://kariraman.com/")}" target="_blank" rel="noopener noreferrer">${escapeHtml(umkDataset.kompilasi?.nama || "KarirAman")}</a>${umkDataset.kompilasi?.lisensi ? ` (lisensi ${escapeHtml(umkDataset.kompilasi.lisensi)})` : ""}${umkDataset.kompilasi?.data_per ? `, data per ${escapeHtml(formatTanggalID(umkDataset.kompilasi.data_per))}` : ""}; tiap baris tetap mencantumkan URL sumber aslinya.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById("cari-kota");
+      var tbody = document.getElementById("tbody-kota");
+      if (!input || !tbody) return;
+      var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+      input.addEventListener("input", function () {
+        var q = (input.value || "").toLowerCase().trim();
+        for (var i = 0; i < rows.length; i++) {
+          var tr = rows[i];
+          var text = (tr.getAttribute("data-nama") || "") + " " + (tr.getAttribute("data-provinsi") || "");
+          tr.style.display = !q || text.indexOf(q) !== -1 ? "" : "none";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>`;
+}
+
+function renderKotaDetailPage(k) {
+  const umkFormatted = formatRupiah(k.umk);
+  const umpProvFormatted = formatRupiah(k.ump_provinsi);
+  const selisihFormatted = formatSelisih(k.selisih_ump);
+  const sumberLinks = (k.sumber_url || [])
+    .map(
+      (url) =>
+        `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url)}</a></li>`
+    )
+    .join("\n");
+
+  const top5Provinsi = umkDataset.kota
+    .filter((item) => item.provinsi_slug === k.provinsi_slug)
+    .sort((a, b) => b.umk - a.umk)
+    .slice(0, 5);
+
+  const top5Rows = top5Provinsi
+    .map(
+      (item, idx) => `<tr>
+        <td>${idx + 1}</td>
+        <td><a href="/kota/${escapeHtml(item.slug)}">${escapeHtml(item.nama)}</a>${item.slug === k.slug ? " <strong>(daerah ini)</strong>" : ""}</td>
+        <td class="num">${formatRupiah(item.umk)}</td>
+        <td class="num">${formatSelisih(item.selisih_ump)}</td>
+      </tr>`
+    )
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UMK ${escapeHtml(k.nama)} 2026 — ${umkFormatted} | UMRO Monitor</title>
+  <meta name="description" content="UMK ${escapeHtml(k.nama)} (${escapeHtml(k.provinsi)}) tahun 2026 sebesar ${umkFormatted}, selisih ${selisihFormatted} terhadap UMP ${escapeHtml(k.provinsi)} (${umpProvFormatted}). SK: ${escapeHtml(k.nomor_sk || "—")}.">
+  <style>${BASE_STYLES}</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p style="margin:0 0 0.5rem 0;"><a href="/kota">&larr; Semua UMK Kabupaten/Kota</a> | <a href="/provinsi/${escapeHtml(k.provinsi_slug)}">Provinsi ${escapeHtml(k.provinsi)}</a></p>
+      <h1>UMK ${escapeHtml(k.nama)} 2026</h1>
+      <p class="tagline">Provinsi <a href="/provinsi/${escapeHtml(k.provinsi_slug)}">${escapeHtml(k.provinsi)}</a> — UMRO Monitor</p>
+      <div class="badges">
+        <span class="badge badge-year">2026</span>
+        <span class="badge">berlaku ${escapeHtml(formatTanggalID(k.berlaku_dari))}</span>
+        <span class="badge">${escapeHtml(umkDataset.dasar_hukum)}</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="box">
+        <h2>Rincian Ketetapan UMK ${escapeHtml(k.nama)}</h2>
+        <div class="dl-grid">
+          <div class="dl-item">
+            <div class="dl-label">Kabupaten/Kota</div>
+            <div class="dl-val">${escapeHtml(k.nama)} (${escapeHtml(k.jenis)})</div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">Provinsi</div>
+            <div class="dl-val"><a href="/provinsi/${escapeHtml(k.provinsi_slug)}">${escapeHtml(k.provinsi)}</a></div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">UMK 2026</div>
+            <div class="dl-val">${umkFormatted}</div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">UMP Provinsi &amp; Selisih</div>
+            <div class="dl-val">${umpProvFormatted} (${selisihFormatted})</div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">Nomor &amp; Tanggal SK</div>
+            <div class="dl-val">${escapeHtml(k.nomor_sk || "—")} (${escapeHtml(formatTanggalID(k.tanggal_sk))})</div>
+          </div>
+          <div class="dl-item">
+            <div class="dl-label">Berlaku Dari &amp; Status Verifikasi</div>
+            <div class="dl-val">berlaku ${escapeHtml(formatTanggalID(k.berlaku_dari))} — ${escapeHtml(k.status_verifikasi)} (dicek_pada: <code>${escapeHtml(k.dicek_pada)}</code> / ${escapeHtml(formatTanggalID(k.dicek_pada))})</div>
+          </div>
+        </div>
+
+        <h3>Sumber Verifikasi (sumber_url)</h3>
+        <ul class="source-list">
+          ${sumberLinks}
+        </ul>
+        <p style="margin-top:1rem;">
+          <a href="/provinsi/${escapeHtml(k.provinsi_slug)}">&larr; Lihat UMP &amp; daftar UMK Provinsi ${escapeHtml(k.provinsi)}</a> |
+          <a href="/kota">Lihat seluruh UMK kabupaten/kota Indonesia</a>
+        </p>
+      </section>
+
+      <section class="box" id="pembanding-provinsi">
+        <h2>5 UMK Tertinggi di Provinsi ${escapeHtml(k.provinsi)}</h2>
+        <div class="table-wrap" style="margin-bottom:0;">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Kabupaten/Kota</th>
+                <th class="num">UMK 2026</th>
+                <th class="num">Selisih vs UMP</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${top5Rows}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Data dicek 29 Oktober 2026 (dicek_pada: ${escapeHtml(k.dicek_pada)}). Angka bisa berubah bila gubernur merevisi SK.
     </footer>
   </div>
 </body>
@@ -488,9 +862,9 @@ function render404Page(slug) {
 <body>
   <div class="container">
     <header>
-      <h1>404 — Provinsi Tidak Ditemukan</h1>
-      <p class="tagline">Data provinsi <code>${escapeHtml(slug)}</code> tidak tersedia dalam dataset UMP 2026.</p>
-      <p><a href="/">&larr; Kembali ke tabel UMP 38 provinsi</a></p>
+      <h1>404 — Halaman Tidak Ditemukan</h1>
+      <p class="tagline">Data <code>${escapeHtml(slug)}</code> tidak tersedia dalam dataset 2026.</p>
+      <p><a href="/">&larr; Kembali ke tabel UMP 38 provinsi</a> | <a href="/kota">Daftar UMK Kabupaten/Kota</a></p>
     </header>
   </div>
 </body>
@@ -517,6 +891,22 @@ export default {
       return htmlResponse(renderHomePage(), 200);
     }
 
+    // GET /kota
+    if (method === "GET" && (pathname === "/kota" || pathname === "/kota/")) {
+      const provSlug = (searchParams.get("provinsi") || "").trim();
+      return htmlResponse(renderKotaListPage(provSlug), 200);
+    }
+
+    // GET /kota/:slug
+    if (method === "GET" && pathname.startsWith("/kota/")) {
+      const slug = decodeURIComponent(pathname.slice("/kota/".length)).replace(/\/+$/, "");
+      const found = umkDataset.kota.find((k) => k.slug === slug);
+      if (!found) {
+        return htmlResponse(render404Page(slug), 404);
+      }
+      return htmlResponse(renderKotaDetailPage(found), 200);
+    }
+
     // GET /provinsi/:slug
     if (method === "GET" && pathname.startsWith("/provinsi/")) {
       const slug = decodeURIComponent(pathname.slice("/provinsi/".length)).replace(/\/+$/, "");
@@ -534,10 +924,35 @@ export default {
         tahun: dataset.tahun,
         dibuat: dataset.dibuat,
         jumlah_provinsi: dataset.jumlah_provinsi,
+        jumlah_kota: umkDataset.jumlah_kota,
+        jumlah_provinsi_dengan_umk: umkDataset.jumlah_provinsi_dengan_umk,
         dasar_hukum: dataset.dasar_hukum,
         catatan: dataset.catatan,
         sumber_rekapitulasi: dataset.sumber_rekapitulasi,
       });
+    }
+
+    // GET /api/umk
+    if (method === "GET" && pathname === "/api/umk") {
+      const provSlug = (searchParams.get("provinsi") || "").trim();
+      const list = provSlug
+        ? umkDataset.kota.filter((k) => k.provinsi_slug === provSlug)
+        : umkDataset.kota;
+      return jsonResponse({
+        tahun: umkDataset.tahun,
+        jumlah: list.length,
+        kota: list,
+      });
+    }
+
+    // GET /api/umk/:slug
+    if (method === "GET" && pathname.startsWith("/api/umk/")) {
+      const slug = decodeURIComponent(pathname.slice("/api/umk/".length)).replace(/\/+$/, "");
+      const found = umkDataset.kota.find((k) => k.slug === slug);
+      if (!found) {
+        return jsonResponse({ ok: false, error: "Kabupaten/kota tidak ditemukan", slug }, 404);
+      }
+      return jsonResponse(found, 200);
     }
 
     // GET /api/ump — tahun 2026 (dataset utama) dan 2025 (kolom ump_sebelumnya).
@@ -623,10 +1038,36 @@ export default {
         dibuat: new Date().toISOString(),
         tahun_minat: 2027,
       };
-      if (env && env.umrmonitor_subs) {
+      if (!env || !env.umrmonitor_subs) {
+        // Jangan pernah balas ok:true kalau tidak ada tempat menyimpan — itu sukses palsu.
+        return jsonResponse(
+          { ok: false, error: "penyimpanan langganan belum dikonfigurasi" },
+          503,
+          "no-store"
+        );
+      }
+      try {
         await env.umrmonitor_subs.put(`sub:${email}`, JSON.stringify(record));
+      } catch {
+        return jsonResponse({ ok: false, error: "gagal menyimpan langganan" }, 500, "no-store");
       }
       return jsonResponse({ ok: true }, 200, "no-store");
+    }
+
+    // GET /api/subscribe/jumlah — bukti bahwa penyimpanan benar-benar bekerja.
+    // Hanya agregat (jumlah), tidak pernah membocorkan alamat email.
+    if (method === "GET" && pathname === "/api/subscribe/jumlah") {
+      if (!env || !env.umrmonitor_subs) {
+        return jsonResponse({ ok: false, error: "penyimpanan belum dikonfigurasi" }, 503);
+      }
+      let cursor;
+      let jumlah = 0;
+      do {
+        const page = await env.umrmonitor_subs.list({ prefix: "sub:", cursor });
+        jumlah += page.keys.length;
+        cursor = page.list_complete ? undefined : page.cursor;
+      } while (cursor);
+      return jsonResponse({ ok: true, jumlah }, 200, "no-store");
     }
 
     // Static assets fallback if bound

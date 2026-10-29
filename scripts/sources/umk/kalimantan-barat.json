@@ -1,0 +1,146 @@
+{
+ "provinsi": "Kalimantan Barat",
+ "slug": "kalimantan-barat",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025",
+ "tanggal_sk": "2025-12-23",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://disnakertrans.kalbarprov.go.id/peraturan/sk-ump-dan-umk-tahun-2026/",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-barat/#kabupaten-sambas",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-barat/#kabupaten-bengkayang",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-barat/#kabupaten-landak",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-barat/#kabupaten-mempawah",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/kalimantan-barat/#kabupaten-sanggau",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kabupaten Ketapang",
+   "jenis": "Kabupaten",
+   "umk": 3561801,
+   "kode_bps": "6106",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Kayong Utara",
+   "jenis": "Kabupaten",
+   "umk": 3370586,
+   "kode_bps": "6111",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Bengkayang",
+   "jenis": "Kabupaten",
+   "umk": 3252580,
+   "kode_bps": "6102",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kota Singkawang",
+   "jenis": "Kota",
+   "umk": 3247387,
+   "kode_bps": "6172",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Mempawah",
+   "jenis": "Kabupaten",
+   "umk": 3220801,
+   "kode_bps": "6104",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Landak",
+   "jenis": "Kabupaten",
+   "umk": 3211256,
+   "kode_bps": "6103",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kota Pontianak",
+   "jenis": "Kota",
+   "umk": 3205220,
+   "kode_bps": "6171",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Sambas",
+   "jenis": "Kabupaten",
+   "umk": 3202663,
+   "kode_bps": "6101",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Sintang",
+   "jenis": "Kabupaten",
+   "umk": 3187965,
+   "kode_bps": "6107",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Sanggau",
+   "jenis": "Kabupaten",
+   "umk": 3121747,
+   "kode_bps": "6105",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Melawi",
+   "jenis": "Kabupaten",
+   "umk": 3109431,
+   "kode_bps": "6110",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Kapuas Hulu",
+   "jenis": "Kabupaten",
+   "umk": 3106259,
+   "kode_bps": "6108",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  },
+  {
+   "nama": "Kabupaten Kubu Raya",
+   "jenis": "Kabupaten",
+   "umk": 3100000,
+   "kode_bps": "6112",
+   "nomor_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "provinsi": "DI Yogyakarta",
+ "slug": "di-yogyakarta",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025",
+ "tanggal_sk": null,
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://nakertrans.jogjaprov.go.id/berita/detail/ump-dan-umk-diy-tahun-2026-resmi-ditetapkan-berlaku-mulai-1-januari-2026",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/di-yogyakarta/#kabupaten-kulon-progo",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/di-yogyakarta/#kabupaten-bantul",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/di-yogyakarta/#kabupaten-gunungkidul",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/di-yogyakarta/#kabupaten-sleman",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/di-yogyakarta/#kota-yogyakarta",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Yogyakarta",
+   "jenis": "Kota",
+   "umk": 2827593,
+   "kode_bps": "3471",
+   "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Sleman",
+   "jenis": "Kabupaten",
+   "umk": 2624387,
+   "kode_bps": "3404",
+   "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Bantul",
+   "jenis": "Kabupaten",
+   "umk": 2509001,
+   "kode_bps": "3402",
+   "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Kulon Progo",
+   "jenis": "Kabupaten",
+   "umk": 2504520,
+   "kode_bps": "3401",
+   "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Gunung Kidul",
+   "jenis": "Kabupaten",
+   "umk": 2468378,
+   "kode_bps": "3403",
+   "nomor_sk": "Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 443 Tahun 2025"
+  }
+ ]
+}

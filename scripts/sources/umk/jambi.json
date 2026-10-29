@@ -1,0 +1,80 @@
+{
+ "provinsi": "Jambi",
+ "slug": "jambi",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Nomor 1201/KEP.GUB/DISNAKERTRANS-3.3/2025",
+ "tanggal_sk": "2026-01-01",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "",
+ "sumber": [
+  {
+   "url": "https://data.goodstats.id/statistic/simak-daftar-umk-jambi-2026-Mrta2",
+   "tipe": "berita",
+   "judul": "9 baris cocok",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://www.tempo.co/ekonomi/daftar-wilayah-umk-tertinggi-dan-terendah-2026-2102678",
+   "tipe": "berita",
+   "judul": "sumber tambahan",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Jambi",
+   "jenis": "Kota",
+   "umk": 3868963.0
+  },
+  {
+   "nama": "Kabupaten Muaro Jambi",
+   "jenis": "Kabupaten",
+   "umk": 3651917.0
+  },
+  {
+   "nama": "Kabupaten Tanjung Jabung Barat",
+   "jenis": "Kabupaten",
+   "umk": 3551430.0
+  },
+  {
+   "nama": "Kabupaten Sarolangun",
+   "jenis": "Kabupaten",
+   "umk": 3533562.0
+  },
+  {
+   "nama": "Kabupaten Tanjung Jabung Timur",
+   "jenis": "Kabupaten",
+   "umk": 3486521.0
+  },
+  {
+   "nama": "Kota Sungai Penuh",
+   "jenis": "Kota",
+   "umk": 3471497.0
+  },
+  {
+   "nama": "Kabupaten Batang Hari",
+   "jenis": "Kabupaten",
+   "umk": 3471497.0
+  },
+  {
+   "nama": "Kabupaten Bungo",
+   "jenis": "Kabupaten",
+   "umk": 3471497.0
+  },
+  {
+   "nama": "Kabupaten Kerinci",
+   "jenis": "Kabupaten",
+   "umk": 3471497.0
+  },
+  {
+   "nama": "Kabupaten Merangin",
+   "jenis": "Kabupaten",
+   "umk": 3471497.0
+  },
+  {
+   "nama": "Kabupaten Tebo",
+   "jenis": "Kabupaten",
+   "umk": 3471497.0
+  }
+ ]
+}

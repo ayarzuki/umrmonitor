@@ -1,0 +1,300 @@
+{
+ "provinsi": "Jawa Tengah",
+ "slug": "jawa-tengah",
+ "tahun": 2026,
+ "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025",
+ "tanggal_sk": "2025-12-24",
+ "berlaku_dari": "2026-01-01",
+ "catatan": "Angka dan nomor SK dari kompilasi KarirAman (CC BY 4.0), tiap baris mencantumkan sumber SK/JDIH.",
+ "kompilasi": {
+  "nama": "KarirAman",
+  "url": "https://kariraman.com/api/v1/minimum-wages/2026.json",
+  "lisensi": "CC BY 4.0",
+  "diakses": "2026-10-29"
+ },
+ "sumber": [
+  {
+   "url": "https://jdih.jatengprov.go.id/produk_hukum/kepgub/sk_100.3.3.1-505_th_2025_auten.pdf",
+   "tipe": "sk",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-tengah/#kabupaten-cilacap",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-tengah/#kabupaten-banyumas",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-tengah/#kabupaten-purbalingga",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-tengah/#kabupaten-banjarnegara",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  },
+  {
+   "url": "https://kariraman.com/upah-minimum/jawa-tengah/#kabupaten-kebumen",
+   "tipe": "kompilasi",
+   "judul": "sumber baris",
+   "diakses": "2026-10-29"
+  }
+ ],
+ "rows": [
+  {
+   "nama": "Kota Semarang",
+   "jenis": "Kota",
+   "umk": 3701709,
+   "kode_bps": "3374",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Demak",
+   "jenis": "Kabupaten",
+   "umk": 3122805,
+   "kode_bps": "3321",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Kendal",
+   "jenis": "Kabupaten",
+   "umk": 2992994,
+   "kode_bps": "3324",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Semarang",
+   "jenis": "Kabupaten",
+   "umk": 2940088,
+   "kode_bps": "3322",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Kudus",
+   "jenis": "Kabupaten",
+   "umk": 2818585,
+   "kode_bps": "3319",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Cilacap",
+   "jenis": "Kabupaten",
+   "umk": 2773184,
+   "kode_bps": "3301",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Jepara",
+   "jenis": "Kabupaten",
+   "umk": 2756501,
+   "kode_bps": "3320",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Batang",
+   "jenis": "Kabupaten",
+   "umk": 2708520,
+   "kode_bps": "3325",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kota Pekalongan",
+   "jenis": "Kota",
+   "umk": 2700926,
+   "kode_bps": "3375",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kota Salatiga",
+   "jenis": "Kota",
+   "umk": 2698273.24,
+   "kode_bps": "3373",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Pekalongan",
+   "jenis": "Kabupaten",
+   "umk": 2633700,
+   "kode_bps": "3326",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Magelang",
+   "jenis": "Kabupaten",
+   "umk": 2607790,
+   "kode_bps": "3308",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Karanganyar",
+   "jenis": "Kabupaten",
+   "umk": 2592154.06,
+   "kode_bps": "3313",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kota Surakarta",
+   "jenis": "Kota",
+   "umk": 2570000,
+   "kode_bps": "3372",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Klaten",
+   "jenis": "Kabupaten",
+   "umk": 2538691,
+   "kode_bps": "3310",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Boyolali",
+   "jenis": "Kabupaten",
+   "umk": 2537949,
+   "kode_bps": "3309",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kota Tegal",
+   "jenis": "Kota",
+   "umk": 2526510,
+   "kode_bps": "3376",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Sukoharjo",
+   "jenis": "Kabupaten",
+   "umk": 2500000,
+   "kode_bps": "3311",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Pati",
+   "jenis": "Kabupaten",
+   "umk": 2485000,
+   "kode_bps": "3318",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Tegal",
+   "jenis": "Kabupaten",
+   "umk": 2484162,
+   "kode_bps": "3328",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Purbalingga",
+   "jenis": "Kabupaten",
+   "umk": 2474721.94,
+   "kode_bps": "3303",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Banyumas",
+   "jenis": "Kabupaten",
+   "umk": 2474598.99,
+   "kode_bps": "3302",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Wonosobo",
+   "jenis": "Kabupaten",
+   "umk": 2455038.01,
+   "kode_bps": "3307",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Pemalang",
+   "jenis": "Kabupaten",
+   "umk": 2433254,
+   "kode_bps": "3327",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kota Magelang",
+   "jenis": "Kota",
+   "umk": 2429285,
+   "kode_bps": "3371",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Purworejo",
+   "jenis": "Kabupaten",
+   "umk": 2401961.91,
+   "kode_bps": "3306",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Brebes",
+   "jenis": "Kabupaten",
+   "umk": 2400350.47,
+   "kode_bps": "3329",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Kebumen",
+   "jenis": "Kabupaten",
+   "umk": 2400000,
+   "kode_bps": "3305",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Grobogan",
+   "jenis": "Kabupaten",
+   "umk": 2399186,
+   "kode_bps": "3315",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Temanggung",
+   "jenis": "Kabupaten",
+   "umk": 2397000,
+   "kode_bps": "3323",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Rembang",
+   "jenis": "Kabupaten",
+   "umk": 2386305,
+   "kode_bps": "3317",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Blora",
+   "jenis": "Kabupaten",
+   "umk": 2345695,
+   "kode_bps": "3316",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Sragen",
+   "jenis": "Kabupaten",
+   "umk": 2337700,
+   "kode_bps": "3314",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Wonogiri",
+   "jenis": "Kabupaten",
+   "umk": 2335126,
+   "kode_bps": "3312",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  },
+  {
+   "nama": "Kabupaten Banjarnegara",
+   "jenis": "Kabupaten",
+   "umk": 2327813.08,
+   "kode_bps": "3304",
+   "nomor_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025"
+  }
+ ]
+}
