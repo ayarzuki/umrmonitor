@@ -28,6 +28,18 @@ export function formatRupiah(num) {
   return `Rp${formattedInt},${decPart}`;
 }
 
+function formatTanggalID(iso) {
+  // "2026-01-01" -> "1 Januari 2026" (konvensi Indonesia, dipakai di badge & footer).
+  const bulan = [
+    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+    "Juli", "Agustus", "September", "Oktober", "November", "Desember",
+  ];
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso ?? ""));
+  if (!m) return String(iso ?? "");
+  const [, y, mo, d] = m;
+  return `${Number(d)} ${bulan[Number(mo) - 1] ?? mo} ${y}`;
+}
+
 function formatPersen(num) {
   // Konvensi Indonesia: koma sebagai pemisah desimal (6,7% bukan 6.7%).
   const n = Number(num);
@@ -413,7 +425,7 @@ function renderProvinsiPage(p) {
       <p class="tagline">UMRO Monitor — Upah minimum Indonesia, bertanggal dan bisa dicek.</p>
       <div class="badges">
         <span class="badge badge-year">${escapeHtml(p.tahun)}</span>
-        <span class="badge">berlaku ${escapeHtml(p.berlaku_dari)}</span>
+        <span class="badge">berlaku ${escapeHtml(formatTanggalID(p.berlaku_dari))}</span>
         <span class="badge">${escapeHtml(dataset.dasar_hukum)}</span>
       </div>
     </header>
@@ -444,7 +456,7 @@ function renderProvinsiPage(p) {
           </div>
           <div class="dl-item">
             <div class="dl-label">Tanggal Berlaku &amp; Verifikasi</div>
-            <div class="dl-val">${escapeHtml(p.berlaku_dari)} (${escapeHtml(p.status_verifikasi)}, dicek ${escapeHtml(p.dicek_pada)})</div>
+            <div class="dl-val">${escapeHtml(formatTanggalID(p.berlaku_dari))} (${escapeHtml(p.status_verifikasi)}, dicek ${escapeHtml(formatTanggalID(p.dicek_pada))})</div>
           </div>
         </div>
 

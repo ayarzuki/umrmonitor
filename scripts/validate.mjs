@@ -199,6 +199,17 @@ async function run() {
       );
     }
 
+    // 7c. Tanggal tampil dalam format Indonesia, bukan ISO mentah
+    {
+      const res = await fetch(`${baseUrl}/provinsi/sulawesi-tengah`);
+      const html = await res.text();
+      const ok =
+        res.status === 200 &&
+        html.includes("berlaku 1 Januari 2026") &&
+        !html.includes("berlaku 2026-01-01");
+      check("GET /provinsi/* menampilkan tanggal Indonesia (1 Januari 2026), bukan ISO", ok, `status=${res.status}`);
+    }
+
     // 8. POST subscribe email valid -> ok:true
     {
       const res = await fetch(`${baseUrl}/api/subscribe`, {
