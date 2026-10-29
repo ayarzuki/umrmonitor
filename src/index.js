@@ -29,8 +29,11 @@ export function formatRupiah(num) {
 }
 
 function formatPersen(num) {
+  // Konvensi Indonesia: koma sebagai pemisah desimal (6,7% bukan 6.7%).
   const n = Number(num);
-  return `${n}%`;
+  if (!Number.isFinite(n)) return "—";
+  const teks = Number.isInteger(n) ? String(n) : String(Math.round(n * 100) / 100);
+  return `${teks.replace(".", ",")}%`;
 }
 
 function jsonResponse(data, status = 200, cacheControl = "public, max-age=300") {

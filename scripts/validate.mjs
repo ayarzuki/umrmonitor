@@ -168,6 +168,19 @@ async function run() {
       );
     }
 
+    // 7b. Desimal persen pakai koma (konvensi Indonesia): 9,08% bukan 9.08%
+    {
+      const res = await fetch(`${baseUrl}/`);
+      const html = await res.text();
+      const comma = html.includes("9,08%");
+      const dot = html.includes("9.08%");
+      check(
+        "GET / menampilkan persen desimal dengan koma (9,08%, bukan 9.08%)",
+        res.status === 200 && comma && !dot,
+        `comma=${comma}, dot=${dot}`
+      );
+    }
+
     // 8. POST subscribe email valid -> ok:true
     {
       const res = await fetch(`${baseUrl}/api/subscribe`, {
