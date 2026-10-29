@@ -4,7 +4,7 @@ Situs + API referensi **Upah Minimum Provinsi (UMP) Indonesia 2026** untuk 38 pr
 
 Dibuat untuk staf HR/payroll UMKM, konsultan HR, dan vendor HRIS yang tiap Desember memperbarui tarif secara manual. Satu provinsi terlewat = payroll salah.
 
-**Live:** https://umrmonitor.workers.dev
+**Live:** https://umrmonitor.aulya-yarzuki.workers.dev
 
 > Angka resmi tetap mengacu pada SK gubernur dan publikasi Kementerian Ketenagakerjaan. Repo ini menghimpun ulang dari sumber publik yang dicantumkan per baris, dan mencatat kapan terakhir dicek.
 
@@ -42,7 +42,7 @@ node scripts/validate.mjs
 Menguji instance yang sudah jalan/ter-deploy:
 
 ```bash
-node scripts/validate.mjs --base=https://umrmonitor.workers.dev
+node scripts/validate.mjs --base=https://umrmonitor.aulya-yarzuki.workers.dev
 ```
 
 ## API
@@ -60,8 +60,8 @@ node scripts/validate.mjs --base=https://umrmonitor.workers.dev
 Contoh:
 
 ```bash
-curl -s https://umrmonitor.workers.dev/api/ump/jawa-barat | jq
-curl -s "https://umrmonitor.workers.dev/api/top?n=3&arah=tertinggi" | jq '.provinsi[].provinsi'
+curl -s https://umrmonitor.aulya-yarzuki.workers.dev/api/ump/jawa-barat | jq
+curl -s "https://umrmonitor.aulya-yarzuki.workers.dev/api/top?n=3&arah=tertinggi" | jq '.provinsi[].provinsi'
 ```
 
 ## Deploy sendiri
