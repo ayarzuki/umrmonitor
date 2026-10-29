@@ -314,7 +314,7 @@ function renderHomePage() {
   const sumberLinks = dataset.sumber_rekapitulasi
     .map(
       (url) =>
-        `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url)}</a> (dicek_pada: <code>${escapeHtml(tanggalCek)}</code>)</li>`
+        `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url)}</a> (dicek ${escapeHtml(formatTanggalID(tanggalCek))})</li>`
     )
     .join("\n");
 
@@ -404,7 +404,7 @@ function renderHomePage() {
       <section class="box" id="sumber-data">
         <h2>Sumber &amp; tanggal cek</h2>
         <p><strong>Dasar hukum:</strong> ${escapeHtml(dataset.dasar_hukum)}</p>
-        <p><strong>Tanggal cek (dicek_pada):</strong> <code>${escapeHtml(tanggalCek)}</code></p>
+        <p><strong>Tanggal cek:</strong> ${escapeHtml(formatTanggalID(tanggalCek))}</p>
         <p>${escapeHtml(dataset.catatan)}</p>
         <ul class="source-list">
           ${sumberLinks}
@@ -708,7 +708,7 @@ function renderKotaListPage(provinsiSlug) {
     </main>
 
     <footer>
-      Data dicek 29 Oktober 2026 (${escapeHtml(umkDataset.dicek_pada)}). Angka bisa berubah bila gubernur merevisi SK.<br>
+      Data dicek ${escapeHtml(formatTanggalID(umkDataset.dicek_pada))}. Angka bisa berubah bila gubernur merevisi SK.<br>
       Sebagian data berasal dari kompilasi <a href="${escapeHtml(umkDataset.kompilasi?.url || "https://kariraman.com/")}" target="_blank" rel="noopener noreferrer">${escapeHtml(umkDataset.kompilasi?.nama || "KarirAman")}</a>${umkDataset.kompilasi?.lisensi ? ` (lisensi ${escapeHtml(umkDataset.kompilasi.lisensi)})` : ""}${umkDataset.kompilasi?.data_per ? `, data per ${escapeHtml(formatTanggalID(umkDataset.kompilasi.data_per))}` : ""}; tiap baris tetap mencantumkan URL sumber aslinya.
     </footer>
   </div>
@@ -808,7 +808,7 @@ function renderKotaDetailPage(k) {
           </div>
           <div class="dl-item">
             <div class="dl-label">Berlaku Dari &amp; Status Verifikasi</div>
-            <div class="dl-val">berlaku ${escapeHtml(formatTanggalID(k.berlaku_dari))} — ${escapeHtml(k.status_verifikasi)} (dicek_pada: <code>${escapeHtml(k.dicek_pada)}</code> / ${escapeHtml(formatTanggalID(k.dicek_pada))})</div>
+            <div class="dl-val">berlaku ${escapeHtml(formatTanggalID(k.berlaku_dari))} — ${escapeHtml(k.status_verifikasi)} (dicek ${escapeHtml(formatTanggalID(k.dicek_pada))})</div>
           </div>
         </div>
 
@@ -843,7 +843,7 @@ function renderKotaDetailPage(k) {
     </main>
 
     <footer>
-      Data dicek 29 Oktober 2026 (dicek_pada: ${escapeHtml(k.dicek_pada)}). Angka bisa berubah bila gubernur merevisi SK.
+      Data dicek ${escapeHtml(formatTanggalID(k.dicek_pada))}. Angka bisa berubah bila gubernur merevisi SK.
     </footer>
   </div>
 </body>

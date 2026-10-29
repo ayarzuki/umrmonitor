@@ -433,7 +433,11 @@ async function run() {
       for (const s of samples) {
         const res = await fetch(`${baseUrl}/kota/${s.slug}`);
         const html = await res.text();
-        if (res.status !== 200 || !html.includes(s.dicek_pada)) {
+        // dicek_pada tampil format Indonesia ("29 Oktober 2026"), bukan ISO.
+        const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+        const [th, bl, tg] = String(s.dicek_pada).split("-");
+        const tanggalID = `${Number(tg)} ${bulan[Number(bl) - 1]} ${th}`;
+        if (res.status !== 200 || !html.includes(tanggalID) || !html.includes("Data dicek")) {
           missing.push(s.slug);
         }
       }
@@ -475,7 +479,7 @@ async function run() {
     {
       const jumlahUrl = `${baseUrl}/api/subscribe/jumlah`;
       const before = await (await fetch(jumlahUrl)).json();
-      const email = `uji-validator@contoh-umkm.co.id`;
+      const email = `uji-validator+${Date.now()}@contoh-umkm.co.id`;
       const post = await fetch(`${baseUrl}/api/subscribe`, {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -500,6 +504,24 @@ async function run() {
         post.status === 200 && postBody.ok === true && grew,
         `status=${post.status}, ok=${postBody.ok}, sebelum=${before.jumlah}, sesudah=${after.jumlah}` +
           (grew ? "" : " — catatan: jalankan ulang setelah kunci uji dihapus")
+      );
+    }
+
+    // 22. Tidak ada tanggal ISO mentah di HTML yang dilihat manusia (API JSON tetap ISO).
+    {
+      const pages = ["/", "/kota", "/kota/kota-bekasi", "/provinsi/jawa-barat"];
+      const offenders = [];
+      for (const p of pages) {
+        const res = await fetch(`${baseUrl}${p}`);
+        let html = await res.text();
+        html = html.replace(/<script[\s\S]*?<\/script>/gi, " ");
+        const found = html.match(/\b20\d\d-\d\d-\d\d\b/g) || [];
+        if (found.length) offenders.push(`${p}: ${[...new Set(found)].slice(0, 3).join(",")}`);
+      }
+      check(
+        "Tanggal di HTML tampil format Indonesia (tidak ada ISO mentah)",
+        offenders.length === 0,
+        offenders.length ? offenders.join(" | ") : "bersih di 4 halaman"
       );
     }
 

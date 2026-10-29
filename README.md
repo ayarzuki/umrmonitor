@@ -112,9 +112,9 @@ npx wrangler deploy        # Worker: umrmonitor.<subdomain-akun>.workers.dev
 
 ## Catatan operasional
 
-- `node scripts/validate.mjs --base=https://umrmonitor.pages.dev` menulis 2 kunci uji ke KV
-  (`sub:hrd@contoh-umkm.co.id`, `sub:uji-validator@contoh-umkm.co.id`). Hapus setelah menguji:
-  `npx wrangler kv key delete "sub:uji-validator@contoh-umkm.co.id" --namespace-id <id> --remote`.
+- `node scripts/validate.mjs --base=https://umrmonitor.pages.dev` menulis kunci uji ke KV
+  (`sub:hrd@contoh-umkm.co.id` dan `sub:uji-validator+<timestamp>@contoh-umkm.co.id`). Hapus setelah menguji:
+  `npx wrangler kv key list --namespace-id <id> --remote` lalu `kv key delete` untuk kunci berpola itu.
 - KV Cloudflare *eventually consistent*: tulisan baru bisa telat ~60 detik muncul di pembacaan lain.
   Karena itu asersi `POST /api/subscribe` membaca balik lewat `/api/subscribe/jumlah` dengan polling.
 
