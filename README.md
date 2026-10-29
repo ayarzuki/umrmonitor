@@ -1,54 +1,86 @@
 # UMRO Monitor
 
-**UMRO Monitor** adalah situs dan API referensi Upah Minimum Provinsi (UMP) Indonesia 2026 untuk 38 provinsi yang bertanggal, menyebutkan nomor SK penetapan, dasar hukum (`PP No. 49 Tahun 2025 tentang Pengupahan`), serta tautan sumber yang dapat diverifikasi oleh tim HR/payroll UMKM, konsultan HR, dan vendor HRIS.
+Situs + API referensi **Upah Minimum Provinsi (UMP) Indonesia 2026** untuk 38 provinsi: nominal UMP 2026, pembanding 2025, persentase kenaikan, **nomor Surat Keputusan gubernur**, dasar hukum, dan tautan sumber per baris — plus tanggal pengecekan.
 
-## Pengembangan Lokal
+Dibuat untuk staf HR/payroll UMKM, konsultan HR, dan vendor HRIS yang tiap Desember memperbarui tarif secara manual. Satu provinsi terlewat = payroll salah.
 
-Pastikan Node.js (≥18) sudah terpasang, lalu jalankan server lokal Cloudflare Worker:
+**Live:** https://umrmonitor.workers.dev
+
+> Angka resmi tetap mengacu pada SK gubernur dan publikasi Kementerian Ketenagakerjaan. Repo ini menghimpun ulang dari sumber publik yang dicantumkan per baris, dan mencatat kapan terakhir dicek.
+
+## Kenapa repo ini ada
+
+Kebanyakan tabel UMP beredar sebagai artikel berita yang terbit sekali lalu basi: tanpa nomor SK, tanpa tanggal cek, dan sering tidak lengkap saat media menutup artikel. Di sini setiap baris data membawa `berlaku_dari`, `nomor_sk`, `status_verifikasi`, `sumber_url[]`, dan `dicek_pada` — jadi klaim "angka ini berlaku" bisa dibuktikan, bukan dipercaya.
+
+## Isi
+
+```
+src/index.js            Worker ES module: HTML server-rendered + API JSON
+public/data/ump-2026.json   Dataset beku (38 provinsi, sha256 dijaga CI)
+scripts/validate.mjs    13 asersi HTML+API, exit non-zero saat gagal
+wrangler.toml           Worker + static assets + KV binding
+TASK.md                 Brief build aslinya (konteks keputusan)
+```
+
+Tanpa framework, tanpa build step, tanpa dependency runtime. Satu `wrangler deploy` dan jalan.
+
+## Jalankan lokal
+
+Butuh Node.js ≥ 18.
 
 ```bash
+npm install
 npx wrangler dev --port 8788 --local
 ```
 
-Untuk menjalankan pengujian otomatis penuh (menyalakan worker lokal, menguji seluruh endpoint HTML & API, lalu mematikan proses):
+Baterai validasi — menyalakan worker lokal sendiri, menguji 13 asersi, lalu mematikan prosesnya:
 
 ```bash
 node scripts/validate.mjs
 ```
 
-Atau menguji instance yang sudah berjalan/ter-deploy:
+Menguji instance yang sudah jalan/ter-deploy:
 
 ```bash
-node scripts/validate.mjs --base=https://umrmonitor.example.workers.dev
+node scripts/validate.mjs --base=https://umrmonitor.workers.dev
 ```
 
-## Cara Deploy (Oleh Operator)
+## API
 
-Pastikan namespace KV `umrmonitor_subs` sudah terkonfigurasi di `wrangler.toml`, lalu jalankan:
+| Endpoint | Keterangan |
+|---|---|
+| `GET /` | Tabel 38 provinsi, server-rendered, + form notifikasi UMP 2027 |
+| `GET /provinsi/:slug` | Halaman per provinsi (SEO: "UMP Jawa Barat 2026"), 404 kalau slug tak dikenal |
+| `GET /api/meta` | `{dataset, tahun, dibuat, jumlah_provinsi, dasar_hukum, catatan, sumber_rekapitulasi}` |
+| `GET /api/ump?tahun=2026` | Semua provinsi. `?tahun=2025` → kolom pembanding. Tahun lain → 404 + `tahun_tersedia` |
+| `GET /api/ump/:slug` | Satu provinsi (404 JSON kalau tidak ada) |
+| `GET /api/top?n=5&arah=tertinggi\|terendah` | n provinsi terurut nominal |
+| `POST /api/subscribe` | Body `{"email":"..."}` → disimpan di KV, balas `{ok:true}`. Email invalid → 400 |
+
+Contoh:
 
 ```bash
-npx wrangler deploy
+curl -s https://umrmonitor.workers.dev/api/ump/jawa-barat | jq
+curl -s "https://umrmonitor.workers.dev/api/top?n=3&arah=tertinggi" | jq '.provinsi[].provinsi'
 ```
 
-## Bentuk Endpoint & API
+## Deploy sendiri
 
-- `GET /` — Halaman HTML utama (server-rendered) berisi tabel perbandingan UMP 2026 & 2025 untuk 38 provinsi, tautan sumber, dan form notifikasi UMP 2027.
-- `GET /provinsi/:slug` — Halaman detail UMP per provinsi (mis. `/provinsi/aceh`, `/provinsi/jawa-barat`).
-- `GET /api/meta` — Metadata dataset (`{dataset, tahun, dibuat, jumlah_provinsi, dasar_hukum, catatan, sumber_rekapitulasi}`).
-- `GET /api/ump?tahun=2026` — Seluruh data provinsi (`{tahun, jumlah, provinsi: [...]}`). `?tahun=2025` mengembalikan kolom pembanding (`ump_sebelumnya`); tahun lain → 404 dengan `tahun_tersedia`.
-- `GET /api/ump/:slug` — Detail JSON satu provinsi berdasarkan slug (404 jika tidak ditemukan).
-- `GET /api/top?n=5&arah=tertinggi|terendah` — Daftar `n` provinsi dengan nominal UMP tertinggi atau terendah.
-- `POST /api/subscribe` — Mendaftarkan email notifikasi UMP 2027 ke KV `umrmonitor_subs` dengan body JSON `{"email": "nama@domain.com"}`.
+1. `npx wrangler kv namespace create umrmonitor_subs` → salin `id` ke `wrangler.toml`.
+2. `npx wrangler deploy`.
 
-## Sumber Data & Tanggal Cek
+`wrangler.toml` memakai nama Worker `umrmonitor`; ganti kalau nama itu sudah dipakai di akunmu (subdomain `*.workers.dev` ditentukan nama Worker).
 
-- **File dataset**: `public/data/ump-2026.json`
-- **Dasar hukum**: PP No. 49 Tahun 2025 tentang Pengupahan
-- **Tanggal cek (`dicek_pada`)**: `2026-10-29`
-- **Sumber rekapitulasi**:
-  - `https://kariraman.com/en/minimum-wage`
-  - `https://pajakku.com/artikel/daftar-ump-2026-terlengkap-di-38-provinsi-indonesia`
-  - `https://www.cnbcindonesia.com/news/20260106132852-4-700023/ump-2026-akhirnya-beres-diketok-upah-di-papua-pegunungan-naik-segini`
-  - `https://satudata.kemnaker.go.id/data/kumpulan-data/2252`
+## Data
 
-> **Peringatan Penting**: Jangan edit `public/data/ump-2026.json` tanpa memperbarui `dicek_pada`.
+- **File:** `public/data/ump-2026.json` — 38 provinsi, sha256 `681d61f…0eac1f`
+- **Dasar hukum:** PP No. 49 Tahun 2025 tentang Pengupahan
+- **Dicek pada:** 2026-10-29
+- **Verifikasi silang:** `kariraman.com` (38/38) dan `pajakku.com` (38/38) cocok sampai rupiah; rekapitulasi Kemnaker via CNBC Indonesia (6 Jan 2026) cocok untuk seluruh provinsi kecuali Aceh, yang SK-nya baru terbit 6 Jan 2026 sebesar Rp3.932.552 (rekapitulasi awal masih memakai angka 2025).
+- **Sumber lengkap:** lihat `sumber_rekapitulasi` di `/api/meta`
+
+**Jangan edit dataset tanpa memperbarui `dicek_pada`** — CI dan watchdog membandingkan sha256 dan akan gagal kalau berubah tanpa nilai ekspektasi ikut diperbarui.
+
+## Lisensi
+
+Kode: MIT (`LICENSE`). Dataset: fakta publik dari SK gubernur, dihimpun ulang dengan atribusi sumber per baris — lihat catatan di akhir `LICENSE`.

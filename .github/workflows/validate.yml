@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Menyalakan worker lokal (wrangler dev --local), menjalankan 13 asersi
+      # HTML + API, lalu mematikan prosesnya. Exit non-zero kalau ada yang gagal.
+      - name: Baterai validasi (13 asersi)
+        run: node scripts/validate.mjs
+
+      - name: Dataset tidak boleh diubah diam-diam
+        run: |
+          EXPECTED=681d61fe82ccba2a84172c8eaefa4eb74b70ca04f425e6e9d50b5f5ece0eac1f
+          ACTUAL=$(sha256sum public/data/ump-2026.json | cut -d' ' -f1)
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "::error file=public/data/ump-2026.json::Dataset berubah ($ACTUAL). Kalau ini memang disengaja, perbarui dicek_pada + nilai EXPECTED di .github/workflows/validate.yml dan di .hermes watchdog."
+            exit 1
+          fi
+          echo "Dataset utuh: $ACTUAL"
